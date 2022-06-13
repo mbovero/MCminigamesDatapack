@@ -17,7 +17,7 @@ gamerule doImmediateRespawn false
 
 
 ###Lobby Setup
-#gamemode adventure @a
+gamemode adventure @a
 setworldspawn 8 -60 8
 kill @e[type=armor_stand,scores={TickTime=0..}]
 

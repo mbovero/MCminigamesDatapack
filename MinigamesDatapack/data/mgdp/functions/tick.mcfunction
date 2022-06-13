@@ -48,7 +48,7 @@ execute if score bool KOTHstart matches 19 run title @a[tag=queued] title {"text
     execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=200}] run scoreboard players set bool KOTH 1
     execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=200}] run scoreboard players set bool KOTHstart 0
     #kill timer display
-    kill @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},scores={TickTime=200}]
+    kill @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},scores={TickTime=200..}]
 #end timer on two button presses
 execute if score bool KOTHstart matches 38.. run kill @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=0..}]
 execute if score bool KOTHstart matches 38.. run tellraw @a {"text":"KOTH queue interrupted","italic":true,"color":"red"}

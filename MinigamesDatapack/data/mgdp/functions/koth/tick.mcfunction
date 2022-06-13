@@ -33,7 +33,7 @@ scoreboard players add @e[type=armor_stand,nbt={Tags:["five_min_timer"]}] TickTi
     execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5980}] run tellraw @a "1"
     execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5980}] run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 9999999999999999999999999 .1
 #end game at end of timer
-execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=6000}] run scoreboard players set bool KOTHend 1
+execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=6000..}] run scoreboard players set bool KOTHend 1
 execute if score bool KOTHend matches 1 run function mgdp:koth/end
 
 
