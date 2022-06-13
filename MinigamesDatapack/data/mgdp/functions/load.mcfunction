@@ -12,6 +12,7 @@ gamerule doPatrolSpawning false
 gamerule doTraderSpawning false
 gamerule doWeatherCycle false
 gamerule mobGriefing false
+gamerule doImmediateRespawn false
 #gamerule sendCommandFeedback false
 
 

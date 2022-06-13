@@ -8,6 +8,7 @@ scoreboard players set @a Kills 0
 scoreboard players set @a TotalKills 0
 scoreboard players set bool GameInSession 0
 scoreboard players set bool KOTH 0
+gamerule doImmediateRespawn false
 team remove 1
 team remove 2
 team remove 3

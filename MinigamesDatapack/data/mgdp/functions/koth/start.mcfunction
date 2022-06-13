@@ -1,6 +1,6 @@
 ###Load message
 title @a title {"text":"KOTH","bold":true,"color":"gold"}
-playsound minecraft:entity.ender_dragon.growl master @a ~ ~ ~ 999999999999999999999999999999999999999999 .5
+playsound minecraft:entity.ender_dragon.growl master @a ~ ~ ~ 999999999999999999999 .5
 
 ###Scoreboard Initialization
 scoreboard objectives add Score dummy
