@@ -17,5 +17,18 @@ execute if score bool GameEnd matches 0 run scoreboard players reset @e[type=pla
 
 
 ###Check Kits
+#Striker
+    execute as @a if score @s KOTHkit matches 10 run function mgdp:koth/kits/striker
 
+#Tank
+    execute as @a if score @s KOTHkit matches 20 run function mgdp:koth/kits/tank
+
+#Archer
+    execute as @a if score @s KOTHkit matches 30 run function mgdp:koth/kits/archer
+
+#Warper
+    execute as @a if score @s KOTHkit matches 40 run function mgdp:koth/kits/warper
+
+#Fisherman
+    execute as @a if score @s KOTHkit matches 50 run function mgdp:koth/kits/fisherman
 
