@@ -14,6 +14,7 @@ gamerule doWeatherCycle false
 gamerule mobGriefing false
 gamerule doImmediateRespawn false
 #gamerule sendCommandFeedback false
+forceload add 8 -1200 8 -1200
 
 
 ###Lobby Setup

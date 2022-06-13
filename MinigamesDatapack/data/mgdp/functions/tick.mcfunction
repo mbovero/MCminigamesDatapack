@@ -26,10 +26,10 @@ execute as @a at @s if entity @s[y=-10,dy=-500] run effect give @s saturation 10
 #detect button press
 execute if block 8 -59 -631 stone_button[powered=true] run scoreboard players add bool KOTHstart 1
 #start timer on one button press
-execute if score bool KOTHstart matches 19 run summon armor_stand 8 -58 -627 {Tags:["ten_sec_timer"],Invisible:1,Invulnerable:1,NoGravity:1,Marker:1,CustomNameVisible:1b,CustomName:"10"}
-execute if score bool KOTHstart matches 19 run tellraw @a {"text":"King of the Hill is starting . . .","bold":true,"color":"green","hoverEvent":{"action":"show_text","contents":[{"text":"Press the button again to stop the queue","italic":true,"color":"gray"}]}}
-execute if score bool KOTHstart matches 19 run tag @a[x=10,y=-62,z=-625,dx=-4,dy=6,dz=-4] add queued
-execute if score bool KOTHstart matches 19 run title @a[tag=queued] title {"text":"Queued","bold":true,"color":"dark_green"}
+execute if score bool KOTHstart matches 19..20 run summon armor_stand 8 -58 -627 {Tags:["ten_sec_timer"],Invisible:1,Invulnerable:1,NoGravity:1,Marker:1,CustomNameVisible:1b,CustomName:"10"}
+execute if score bool KOTHstart matches 19..20 run tellraw @a {"text":"King of the Hill is starting . . .","bold":true,"color":"green","hoverEvent":{"action":"show_text","contents":[{"text":"Press the button again to stop the queue","italic":true,"color":"gray"}]}}
+execute if score bool KOTHstart matches 19..20 run tag @a[x=10,y=-62,z=-625,dx=-4,dy=6,dz=-4] add queued
+execute if score bool KOTHstart matches 19..20 run title @a[tag=queued] title {"text":"Queued","bold":true,"color":"dark_green"}
     #count down display
     scoreboard players add @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]}] TickTime 1
         data modify entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=0}] CustomName set value "10"

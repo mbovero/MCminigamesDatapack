@@ -34,6 +34,7 @@ scoreboard players add @e[type=armor_stand,nbt={Tags:["five_min_timer"]}] TickTi
     execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5980}] run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 9999999999999999999999999 .1
 #end game at end of timer
 execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=6000..}] run scoreboard players set bool KOTHend 1
+kill @e[type=armor_stand,nbt={Tags:["five_min_timer"]},scores={TickTime=6000..}]
 execute if score bool KOTHend matches 1 run function mgdp:koth/end
 
 
@@ -61,19 +62,19 @@ execute as @a[team=4] run spawnpoint @s 14 11 -1200
 
 ###Check Kits
 #Striker
-    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 10 run function mgdp:koth/kits/striker
+    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 10 as @s run function mgdp:koth/kits/striker
 
 #Tank
-    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 20 run function mgdp:koth/kits/tank
+    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 20 as @s run function mgdp:koth/kits/tank
 
 #Archer
-    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 30 run function mgdp:koth/kits/archer
+    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 30 as @s run function mgdp:koth/kits/archer
 
 #Warper
-    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 40 run function mgdp:koth/kits/warper
+    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 40 as @s run function mgdp:koth/kits/warper
 
 #Fisherman
-    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 50 run function mgdp:koth/kits/fisherman
+    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 50 as @s run function mgdp:koth/kits/fisherman
 
 
 
