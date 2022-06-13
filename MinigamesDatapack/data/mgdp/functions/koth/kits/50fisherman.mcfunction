@@ -1,7 +1,7 @@
 #Fisherman Kit
 
 #Give Fishing rod
-item replace entity @s hotbar.1 with fishing_rod{Unbreakable:1b} 1
+item replace entity @s weapon.offhand with fishing_rod{Unbreakable:1b} 1
 #Knockback Fish
 item replace entity @s hotbar.0 with cod{Enchantments:[{id:"knockback",lvl:3}]}
 #Protection 4 leather helmet

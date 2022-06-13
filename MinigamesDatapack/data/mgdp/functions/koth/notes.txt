@@ -15,3 +15,8 @@ Warper 40 | sp ability (teleport)
 Striker 10 | sp ability
 
 Saiyan perma strength, | sp ability (super saiyan, Gives combat buff)
+
+
+
+
+move kit kill detection to koth/tick (notably tank)

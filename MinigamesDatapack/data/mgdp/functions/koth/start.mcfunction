@@ -8,8 +8,9 @@ playsound minecraft:entity.ender_dragon.growl master @a ~ ~ ~ 999999999999999999
 ###Scoreboard Initialization
 scoreboard objectives add Score dummy
 scoreboard objectives setdisplay sidebar Score
-scoreboard players set @a Score 0
-scoreboard players reset @a Deaths
+scoreboard players set @a[tag=queued] Score 0
+scoreboard players set @a Kills 0
+scoreboard players set @a TotalKills 0
 
 ###Game Setup
 #spawning
@@ -22,5 +23,7 @@ spawnpoint @a[tag=queued] 8 12 -1200
 kill @a[tag=queued]
 #timer
 summon armor_stand 8 10 -1200 {Tags:["five_min_timer"],Invisible:1,Invulnerable:1,NoGravity:1,Marker:1}
+#kit give
+scoreboard players set @a[tag=queued] Deaths 1
 
 

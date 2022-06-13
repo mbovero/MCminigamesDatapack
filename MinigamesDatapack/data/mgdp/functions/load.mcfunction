@@ -22,8 +22,11 @@ gamemode adventure @a
 setworldspawn 8 -60 8
 kill @e[type=armor_stand,scores={TickTime=0..}]
 spawnpoint @a 8 -60 8
+#button resets
+setblock 8 -59 -631 minecraft:stone_button[facing=south] replace
 
 ###Scoreboard Setup
+scoreboard objectives setdisplay sidebar
 #armor stand timers
 scoreboard objectives add TickTime dummy
 #KOTH start button

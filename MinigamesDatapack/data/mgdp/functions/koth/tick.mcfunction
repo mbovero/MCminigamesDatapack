@@ -1,8 +1,8 @@
 ###Hill
-execute as @a at @s if block ~ ~-0.3 ~ gold_block run scoreboard players add @s Score 1
-execute as @a at @s if block ~ ~-0.3 ~ gold_block run effect give @s glowing 1 255 true
-execute as @a at @s if block ~ ~-1.9 ~ gold_block run scoreboard players add @s Score 1
-execute as @a at @s if block ~ ~-1.9 ~ gold_block run effect give @s glowing 1 255 true
+execute as @a at @s if block ~ ~-0.2 ~ gold_block run scoreboard players add @s Score 1
+execute as @a at @s if block ~ ~-0.2 ~ gold_block run effect give @s glowing 1 255 true
+execute as @a at @s if block ~ ~-2 ~ gold_block run scoreboard players add @s Score 1
+execute as @a at @s if block ~ ~-2 ~ gold_block run effect give @s glowing 1 255 true
 
 ###Void
 execute as @a at @s if entity @s[y=0,dy=-5] run kill @s
@@ -38,8 +38,6 @@ kill @e[type=armor_stand,nbt={Tags:["five_min_timer"]},scores={TickTime=6000..}]
 execute if score bool KOTHend matches 1 run function mgdp:koth/end
 
 
-
-
 ###Random Spawns
 team empty 1
 team empty 2
@@ -62,23 +60,23 @@ execute as @a[team=4] run spawnpoint @s 14 11 -1200
 
 ###Check Kits
 #Striker
-    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 10 as @s run function mgdp:koth/kits/striker
+    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 10 as @s run function mgdp:koth/kits/10striker
 
 #Tank
-    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 20 as @s run function mgdp:koth/kits/tank
+    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 20 as @s run function mgdp:koth/kits/20tank
 
 #Archer
-    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 30 as @s run function mgdp:koth/kits/archer
+    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 30 as @s run function mgdp:koth/kits/30archer
 
 #Warper
-    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 40 as @s run function mgdp:koth/kits/warper
+    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 40 as @s run function mgdp:koth/kits/40warper
 
 #Fisherman
-    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 50 as @s run function mgdp:koth/kits/fisherman
+    execute as @e[type=player,scores={Deaths=1..}] if score @s KOTHkit matches 50 as @s run function mgdp:koth/kits/50fisherman
 
 
 
 
 ###Detect respawn
 #execute if score bool GameEnd matches 0 as @e[type=player,scores={Deaths=1..}] run command
-execute if score bool GameEnd matches 0 run scoreboard players reset @e[type=player,scores={Deaths=1..}] Deaths
+scoreboard players reset @e[type=player,tag=queued,scores={Deaths=1..}] Deaths
