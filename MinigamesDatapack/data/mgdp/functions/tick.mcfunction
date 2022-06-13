@@ -22,8 +22,8 @@ execute as @a at @s if entity @s[y=-10,dy=-500] run effect give @s saturation 1 
 
 
 ###Game Start Timers
-execute if block 8 -59 -631 stone_button[powered=true] run 
-
+#KOTH
+execute if block 8 -59 -631 stone_button[powered=true] run scoreboard players add bool KOTHstart 1
 scoreboard players add @e[type=armor_stand,nbt={Tags:["five_sec_timer"]}] TickTime 1
 data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=0}] CustomName set value "5"
 data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=20}] CustomName set value "4"

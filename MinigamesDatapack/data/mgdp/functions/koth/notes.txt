@@ -1,9 +1,17 @@
-Archer | sp ability (5 shot super bow)
+0 - default
+1 - damage
+2 - tank
+3 - range
+4 - magic
+5 - misc.
 
-Tank | w-sword, sheild, Hp buff | sp ability (super regen)
 
-Warper | sp ability (teleport)
+Archer 30 | sp ability (5 shot super bow)
 
-Striker | sp ability
+Tank 20 | w-sword, sheild, Hp buff | sp ability (super regen)
+
+Warper 40 | sp ability (teleport)
+
+Striker 10 | sp ability
 
 Saiyan perma strength, | sp ability (super saiyan, Gives combat buff)
