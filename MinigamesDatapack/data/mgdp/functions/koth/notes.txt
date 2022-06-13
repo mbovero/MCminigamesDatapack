@@ -1,6 +1,6 @@
 Archer | sp ability (5 shot super bow)
 
-Tank w-sword, sheild, Hp buff | sp ability (super regen)
+Tank | w-sword, sheild, Hp buff | sp ability (super regen)
 
 Warper | sp ability (teleport)
 
