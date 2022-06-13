@@ -16,3 +16,4 @@ execute as @a[nbt={foodLevel:17}] run effect give @s minecraft:saturation 1 1 tr
 execute if score bool GameEnd matches 0 run scoreboard players reset @e[type=player,scores={Deaths=1..}] Deaths
 
 
+#does this do anything
