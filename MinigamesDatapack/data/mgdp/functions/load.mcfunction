@@ -20,6 +20,10 @@ gamerule mobGriefing false
 
 
 ###Scoreboard Setup
+#armor stand timers
+scoreboard objectives add TickTime dummy
+scoreboard objectives add KOTHstart dummy
+scoreboard players set bool KOTHstart 0
 #health bar on tab list
 scoreboard objectives add Health health
 scoreboard objectives setdisplay list Health

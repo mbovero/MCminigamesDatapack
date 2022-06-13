@@ -21,9 +21,16 @@ execute as @a at @s if entity @s[y=-69,dy=-5] run effect give @s levitation 1 12
 execute as @a at @s if entity @s[y=-10,dy=-500] run effect give @s saturation 1 255 true
 
 
+###Game Start Timers
+execute if block 8 -59 -631 stone_button[powered=true] run 
 
-
-
+scoreboard players add @e[type=armor_stand,nbt={Tags:["five_sec_timer"]}] TickTime 1
+data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=0}] CustomName set value "5"
+data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=20}] CustomName set value "4"
+data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=40}] CustomName set value "3"
+data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=60}] CustomName set value "2"
+data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=80}] CustomName set value "1"
+kill @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},scores={TickTime=100}]
 
 
 ###Menu options enabling
