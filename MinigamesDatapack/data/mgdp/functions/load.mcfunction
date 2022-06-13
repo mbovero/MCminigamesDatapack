@@ -35,6 +35,12 @@ scoreboard objectives remove Score
 #death count for respawn tracking
 scoreboard objectives add Deaths deathCount
 scoreboard players set @a Deaths 0
+#kill detection
+scoreboard objectives add Kills playerKillCount
+scoreboard players set @a Kills 0
+scoreboard objectives add TotalKills playerKillCount
+scoreboard players set @a TotalKills 0
+
 #game detection
 scoreboard objectives add GameInSession dummy
 scoreboard players set bool GameInSession 0

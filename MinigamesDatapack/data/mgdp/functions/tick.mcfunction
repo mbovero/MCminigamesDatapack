@@ -21,18 +21,32 @@ execute as @a at @s if entity @s[y=-69,dy=-5] run effect give @s levitation 1 12
 execute as @a at @s if entity @s[y=-10,dy=-500] run effect give @s saturation 1 255 true
 
 
-###Game Start Timers
-#KOTH
+#####Game Start Timers
+###KOTH
+#detect button press
 execute if block 8 -59 -631 stone_button[powered=true] run scoreboard players add bool KOTHstart 1
+#start timer on one button press
 execute if score bool KOTHstart matches 19 run summon armor_stand 8 -58 -627 {Tags:["five_sec_timer"],Invisible:1,Invulnerable:1,NoGravity:1,Marker:1,CustomNameVisible:1b}
-
-scoreboard players add @e[type=armor_stand,nbt={Tags:["five_sec_timer"]}] TickTime 1
-data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=0}] CustomName set value "5"
-data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=20}] CustomName set value "4"
-data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=40}] CustomName set value "3"
-data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=60}] CustomName set value "2"
-data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=80}] CustomName set value "1"
-kill @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},scores={TickTime=100}]
+execute if score bool KOTHstart matches 19 run tellraw @a {"text":"King of the Hill is starting . . .","bold":true,"color":"green","hoverEvent":{"action":"show_text","contents":[{"text":"Press the button again to stop the queue","italic":true,"color":"gray"}]}}
+execute if score bool KOTHstart matches 19 run tag @a[x=10,y=-62,z=-625,dx=-4,dy=6,dz=-4] add queued
+execute if score bool KOTHstart matches 19 run title @a[tag=queued] title {"text":"Queued","bold":true,"color":"dark_green"}
+    #count down display
+    scoreboard players add @e[type=armor_stand,nbt={Tags:["five_sec_timer"]}] TickTime 1
+        data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=0}] CustomName set value "5"
+        data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=20}] CustomName set value "4"
+        data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=40}] CustomName set value "3"
+        data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=60}] CustomName set value "2"
+        data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=80}] CustomName set value "1"
+    #start game at end of timer
+    execute if entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=100}] run scoreboard players set bool KOTH 1
+    execute if entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=100}] run function mgdp:koth/load
+    #kill timer display
+    kill @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},scores={TickTime=100}]
+#end timer on two button presses
+execute if score bool KOTHstart matches 38.. run kill @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=0..}]
+execute if score bool KOTHstart matches 38.. run tellraw @a {"text":"KOTH queue interrupted","italic":true,"color":"red"}
+execute if score bool KOTHstart matches 38.. run tag @a remove queued 
+execute if score bool KOTHstart matches 38.. run scoreboard players set bool KOTHstart 0
 
 
 ###Menu options enabling
