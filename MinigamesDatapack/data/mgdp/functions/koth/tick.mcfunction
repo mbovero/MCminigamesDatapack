@@ -7,7 +7,7 @@ execute as @a at @s if block ~ ~-1.9 ~ gold_block run effect give @s glowing 1 2
 ###Void
 execute as @a at @s if entity @s[y=0,dy=-5] run kill @s
 
-###Hunger
+###No Hunger
 execute as @a[nbt={foodLevel:19}] run effect give @s minecraft:saturation 1 1 true
 execute as @a[nbt={foodLevel:17}] run effect give @s minecraft:saturation 1 1 true
 

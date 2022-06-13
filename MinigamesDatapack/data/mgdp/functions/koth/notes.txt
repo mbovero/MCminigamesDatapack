@@ -1,9 +1,9 @@
-####Archer | sp ability (5 shot super bow)
+Archer | sp ability (5 shot super bow)
 
-###Tank w-sword, sheild, Hp buff | sp ability (super regen)
+Tank w-sword, sheild, Hp buff | sp ability (super regen)
 
-###Warper | sp ability (teleport)
+Warper | sp ability (teleport)
 
-####Striker | sp ability
+Striker | sp ability
 
-####Saiyan perma strength, | sp ability (super saiyan, Gives combat buff)
+Saiyan perma strength, | sp ability (super saiyan, Gives combat buff)
