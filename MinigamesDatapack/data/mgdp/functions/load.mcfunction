@@ -17,13 +17,17 @@ gamerule mobGriefing false
 
 ###Lobby Setup
 #gamemode adventure @a
-
+setworldspawn 8 -60 8
 
 ###Scoreboard Setup
 #armor stand timers
 scoreboard objectives add TickTime dummy
+#KOTH start button
 scoreboard objectives add KOTHstart dummy
 scoreboard players set bool KOTHstart 0
+#KOTH end game bool
+scoreboard objectives add KOTHend dummy
+scoreboard players set bool KOTHend 0
 #kit detection
 scoreboard objectives add KOTHkit dummy
 scoreboard players set @a KOTHkit 0
@@ -32,6 +36,11 @@ scoreboard objectives add Health health
 scoreboard objectives setdisplay list Health
 #hard score reset
 scoreboard objectives remove Score
+#team reset
+team remove 1
+team remove 2
+team remove 3
+team remove 4
 #death count for respawn tracking
 scoreboard objectives add Deaths deathCount
 scoreboard players set @a Deaths 0

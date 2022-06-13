@@ -38,8 +38,8 @@ execute if score bool KOTHstart matches 19 run title @a[tag=queued] title {"text
         data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=60}] CustomName set value "2"
         data modify entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=80}] CustomName set value "1"
     #start game at end of timer
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=100}] run scoreboard players set bool KOTH 1
     execute if entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=100}] run function mgdp:koth/load
+    execute if entity @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},limit=1,scores={TickTime=100}] run scoreboard players set bool KOTH 1
     #kill timer display
     kill @e[type=armor_stand,nbt={Tags:["five_sec_timer"]},scores={TickTime=100}]
 #end timer on two button presses
