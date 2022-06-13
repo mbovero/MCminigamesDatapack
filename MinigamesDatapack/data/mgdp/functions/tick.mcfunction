@@ -17,7 +17,7 @@ execute as @a at @s unless block ~ ~-0.3 ~ magenta_glazed_terracotta unless bloc
 
 
 ###Lobby Stuff
-execute as @a at @s if entity @s[y=-69,dy=-5] run effect give @s levitation 1 12 true
+execute as @a at @s if entity @s[y=-69,dy=-5] run effect give @s levitation 1 10 true
 execute as @a at @s if entity @s[y=-10,dy=-500] run effect give @s saturation 10 255 true
 
 

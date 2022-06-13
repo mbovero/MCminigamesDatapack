@@ -20,6 +20,7 @@ gamerule doImmediateRespawn false
 gamemode adventure @a
 setworldspawn 8 -60 8
 kill @e[type=armor_stand,scores={TickTime=0..}]
+spawnpoint @a 8 -60 8
 
 ###Scoreboard Setup
 #armor stand timers
