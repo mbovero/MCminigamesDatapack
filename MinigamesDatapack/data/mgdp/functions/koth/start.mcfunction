@@ -14,6 +14,7 @@ scoreboard players set @a KillsSuper 0
 scoreboard players reset @a PearlUsed
 scoreboard players set @a TotalKills 0
 
+##################Change this for multiple maps
 ###Game Setup
 #spawning
 gamerule doImmediateRespawn true

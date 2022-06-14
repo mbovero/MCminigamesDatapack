@@ -20,4 +20,7 @@ Saiyan perma strength, | sp ability (super saiyan, Gives combat buff)
 
 
 To do:
-make @r tele make sure to tp to other players not self
+make @r tele make sure to tp to other players not self (REWORK WARPER)
+buff striker armor (leather tunic?)
+striker special (resistance potion)
+new maps for KOTH and map selection
