@@ -59,18 +59,20 @@ execute as @a[team=4] run spawnpoint @s 14 11 -1200
 
 
 #####Kits
+#clear on death
+execute as @e[type=player,scores={Deaths=1..},tag=queued] as @s run clear @s
 ##Striker
     execute as @e[type=player,scores={Deaths=1..,KOTHkit=10},tag=queued] as @s run function mgdp:koth/kits/10striker
 
 ##Tank
     execute as @e[type=player,scores={Deaths=1..,KOTHkit=20},tag=queued] as @s run function mgdp:koth/kits/20tank
     #kill reward
-    execute as @a[scores={KOTHkit=10,Kills=3..},tag=queued] as @s run give @s shield{Damage:250} 1
-    execute as @a[scores={KOTHkit=10,Kills=3..},tag=queued] as @s run scoreboard players set @s Kills 0
+    execute as @a[scores={KOTHkit=20,Kills=3..},tag=queued] as @s run give @s shield{Damage:250} 1
+    execute as @a[scores={KOTHkit=20,Kills=3..},tag=queued] as @s run scoreboard players set @s Kills 0
     #kill super reward
-    execute as @a[scores={KOTHkit=30,KillsSuper=5..},tag=queued] as @s run give @s minecraft:potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:10,Amplifier:3,Duration:200}],display:{Name:'"Super Regen Pot"'}}
-    execute as @a[scores={KOTHkit=30,KillsSuper=5..},tag=queued] as @s run playsound minecraft:entity.witch.drink master @a ~ ~ ~ 9999999 .7
-    execute as @a[scores={KOTHkit=30,KillsSuper=5..},tag=queued] as @s run scoreboard players set @s KillsSuper 0
+    execute as @a[scores={KOTHkit=20,KillsSuper=5..},tag=queued] as @s run give @s minecraft:potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:10,Amplifier:3,Duration:200}],display:{Name:'"Super Regen Pot"'}}
+    execute as @a[scores={KOTHkit=20,KillsSuper=5..},tag=queued] as @s run playsound minecraft:entity.witch.drink master @a ~ ~ ~ 9999999 .7
+    execute as @a[scores={KOTHkit=20,KillsSuper=5..},tag=queued] as @s run scoreboard players set @s KillsSuper 0
 
 ##Archer
     execute as @e[type=player,scores={Deaths=1..,KOTHkit=30},tag=queued] as @s run function mgdp:koth/kits/30archer

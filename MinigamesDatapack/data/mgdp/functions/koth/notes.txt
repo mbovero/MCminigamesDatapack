@@ -19,4 +19,5 @@ Saiyan perma strength, | sp ability (super saiyan, Gives combat buff)
 
 
 
-move kit kill detection to koth/tick (notably tank)
+To do:
+make @r tele make sure to tp to other players not self

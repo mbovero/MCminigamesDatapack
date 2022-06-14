@@ -28,5 +28,6 @@ kill @a[tag=queued]
 summon armor_stand 8 10 -1200 {Tags:["five_min_timer"],Invisible:1,Invulnerable:1,NoGravity:1,Marker:1}
 #kit give
 scoreboard players set @a[tag=queued] Deaths 1
+gamemode adventure @a
 
 

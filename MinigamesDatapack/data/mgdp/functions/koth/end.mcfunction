@@ -3,7 +3,6 @@
 ###End KOTH (reset)
 scoreboard players set bool KOTHstart 0
 scoreboard players set bool KOTHend 0
-scoreboard players set @a KOTHkit 0
 scoreboard players set @a Deaths 0
 scoreboard players set @a Kills 0
 scoreboard players set @a KillsSuper 0
@@ -22,6 +21,7 @@ spawnpoint @a 8 -59 8
 tp @a[tag=queued] 8 -59 8
 tag @a remove queued
 setblock 8 -59 -631 minecraft:stone_button[facing=south] replace
+effect clear @a
 
 
 

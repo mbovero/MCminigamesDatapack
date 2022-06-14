@@ -58,10 +58,10 @@ execute if score bool KOTHstart matches 18 run title @a[tag=queued] title {"text
     #kill timer display
     kill @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},scores={TickTime=200..}]
 #end timer on two button presses
-execute if score bool KOTHstart matches 38.. run kill @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=0..}]
-execute if score bool KOTHstart matches 38.. run tellraw @a {"text":"KOTH queue interrupted","italic":true,"color":"red"}
-execute if score bool KOTHstart matches 38.. run tag @a remove queued 
-execute if score bool KOTHstart matches 38.. run scoreboard players set bool KOTHstart 0
+execute if score bool KOTHstart matches 25.. run kill @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=0..}]
+execute if score bool KOTHstart matches 25.. run tellraw @a {"text":"KOTH queue interrupted","italic":true,"color":"red"}
+execute if score bool KOTHstart matches 25.. run tag @a remove queued 
+execute if score bool KOTHstart matches 25.. run scoreboard players set bool KOTHstart 0
 
 
 ###Menu options enabling

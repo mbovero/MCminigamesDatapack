@@ -28,6 +28,7 @@ kill @e[type=armor_stand,scores={TickTime=0..}]
 spawnpoint @a 8 -60 8
 #button resets
 setblock 8 -59 -631 stone_button[facing=south] replace
+kill @e[type=item]
 
 ###Scoreboard Setup
 scoreboard objectives setdisplay sidebar
