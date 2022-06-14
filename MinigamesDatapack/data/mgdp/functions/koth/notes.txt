@@ -6,11 +6,11 @@
 5 - misc.
 
 
-Archer 30 | sp ability (5 shot super bow)
+Archer 30 |  |sp ability (5 shot super bow)
 
-Tank 20 | w-sword, sheild, Hp buff | sp ability (super regen)
+Tank 20 | wooden sword, shield, Hp buff | sp ability (super regen)
 
-Warper 40 | sp ability (teleport)
+Warper 40 | sp ability (teleport to player with highest score) | pearl that tps to random player, pearl that randomizes player locations, gold shovel, golden helmet/boots
 
 Striker 10 | sp ability
 

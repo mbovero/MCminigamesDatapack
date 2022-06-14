@@ -1,18 +1,12 @@
-#Tank Kit
-
+###Tank Kit
 #Give chainmail
-item replace entity @s armor.head with minecraft:chainmail_helmet{Unbreakable:1b} 1
-item replace entity @s armor.chest with minecraft:chainmail_chestplate{Unbreakable:1b} 1
-item replace entity @s armor.legs with minecraft:chainmail_leggings{Unbreakable:1b} 1
-item replace entity @s armor.feet with minecraft:chainmail_boots{Unbreakable:1b} 1
-
+item replace entity @s armor.head with chainmail_helmet{Unbreakable:1b}
+item replace entity @s armor.chest with chainmail_chestplate{Unbreakable:1b}
+item replace entity @s armor.legs with chainmail_leggings{Unbreakable:1b}
+item replace entity @s armor.feet with chainmail_boots{Unbreakable:1b}
 #Give shield
-execute if score @s Kills matches 3.. run item replace entity @s weapon.offhand with minecraft:shield{Damage:250} 1
-execute if score @s Kills matches 3.. run scoreboard players set @s kills 0
-
-#Give Sword
-item replace entity @s hotbar.0 with minecraft:wooden_sword{Unbreakable:1b} 1
-
-
-
-
+item replace entity @s weapon.offhand with shield{Damage:250}
+#Give sword
+item replace entity @s hotbar.0 with wooden_sword{Unbreakable:1b}
+#Give health boost
+effect give @s minecraft:health_boost 999999 1 true

@@ -10,11 +10,14 @@ scoreboard objectives add Score dummy
 scoreboard objectives setdisplay sidebar Score
 scoreboard players set @a[tag=queued] Score 0
 scoreboard players set @a Kills 0
+scoreboard players set @a KillsSuper 0
+scoreboard players reset @a PearlUsed
 scoreboard players set @a TotalKills 0
 
 ###Game Setup
 #spawning
 gamerule doImmediateRespawn true
+gamerule keepInventory true
 team add 1
 team add 2
 team add 3

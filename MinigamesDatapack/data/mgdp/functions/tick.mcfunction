@@ -38,17 +38,17 @@ execute if score bool KOTHstart matches 18 run title @a[tag=queued] title {"text
         data modify entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=60}] CustomName set value "7"
         data modify entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=80}] CustomName set value "6"
         data modify entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=100}] CustomName set value "5"
-        execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=100}] run playsound minecraft:block.note_block.bit master @a 8 -58 -627 99999999999999 1.2
+        execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=100}] run playsound block.note_block.bit master @a 8 -58 -627 99999999999999 1.2
         data modify entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=120}] CustomName set value "4"
-        execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=120}] run playsound minecraft:block.note_block.bit master @a 8 -58 -627 99999999999999 1.4
+        execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=120}] run playsound block.note_block.bit master @a 8 -58 -627 99999999999999 1.4
         data modify entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=140}] CustomName set value "3"
-        execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=140}] run playsound minecraft:block.note_block.bit master @a 8 -58 -627 99999999999999 1.6
+        execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=140}] run playsound block.note_block.bit master @a 8 -58 -627 99999999999999 1.6
         data modify entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=160}] CustomName set value "2"
-        execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=160}] run playsound minecraft:block.note_block.bit master @a 8 -58 -627 99999999999999 1.8
+        execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=160}] run playsound block.note_block.bit master @a 8 -58 -627 99999999999999 1.8
         data modify entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=180}] CustomName set value "1"
-        execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=180}] run playsound minecraft:block.note_block.bit master @a 8 -58 -627 99999999999999 2
-        execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=180}] run particle minecraft:end_rod 8 -58 -627 .75 .1 .75 0 50 normal
-        execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=180}] run particle minecraft:glow 8 -58 -627 .75 .1 .75 0 50 normal
+        execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=180}] run playsound block.note_block.bit master @a 8 -58 -627 99999999999999 2
+        execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=180}] run particle end_rod 8 -58 -627 .75 .1 .75 0 50 normal
+        execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=180}] run particle glow 8 -58 -627 .75 .1 .75 0 50 normal
     #start game at end of timer
     execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=200}] run function mgdp:koth/start
     execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=200}] run scoreboard players set bool KOTH 1 

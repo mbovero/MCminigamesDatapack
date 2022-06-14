@@ -6,10 +6,13 @@ scoreboard players set bool KOTHend 0
 scoreboard players set @a KOTHkit 0
 scoreboard players set @a Deaths 0
 scoreboard players set @a Kills 0
+scoreboard players set @a KillsSuper 0
+scoreboard players reset @a PearlUsed
 scoreboard players set @a TotalKills 0
 scoreboard players set bool GameInSession 0
 scoreboard players set bool KOTH 0
 gamerule doImmediateRespawn false
+gamerule keepInventory false
 team remove 1
 team remove 2
 team remove 3
@@ -33,7 +36,8 @@ tag @a[tag=!Winner] add Loser
 title @a[tag=Loser] title {"text":"You lost","bold":true,"color":"red"}
 execute as @a[tag=Loser] run playsound minecraft:item.goat_horn.sound.3 master @s ~ ~ ~ 999999999999 1.3
 #Reset roles
-tag @a[tag=Loser] remove Loser
-tag @a[tag=Winner] remove Winner
+tag @a remove Loser
+tag @a remove Winner
+scoreboard players reset max Score
 
 scoreboard objectives remove Score
