@@ -31,6 +31,7 @@ scoreboard objectives add KillsSuper playerKillCount
 scoreboard objectives add TotalKills playerKillCount
 #game detection
 scoreboard objectives add GameInSession dummy
+tag @a remove queued
 #KOTH game detection
 scoreboard objectives add KOTH dummy
 #KOTH start button
@@ -42,3 +43,7 @@ scoreboard objectives add KOTHkit dummy
 scoreboard players set @a KOTHkit 0
 #warper pearl detection
 scoreboard objectives add PearlUsed minecraft.used:minecraft.ender_pearl
+
+
+###Reset Scores (and other stuff)
+function mgdp:reset

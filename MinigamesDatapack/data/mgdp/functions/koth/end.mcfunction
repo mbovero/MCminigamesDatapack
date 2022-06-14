@@ -1,6 +1,3 @@
-###End KOTH (reset)
-function mgdp:reset
-tp @a[tag=queued] 8 -59 8
 
 ##Determine Winner
 scoreboard players operation max Score > @a Score
@@ -16,3 +13,8 @@ execute as @a[tag=Loser] run playsound minecraft:item.goat_horn.sound.3 master @
 tag @a remove Loser
 tag @a remove Winner
 scoreboard players reset max Score
+
+###End KOTH (reset)
+function mgdp:reset
+tp @a[tag=queued] 8 -59 8
+tag @a remove queued

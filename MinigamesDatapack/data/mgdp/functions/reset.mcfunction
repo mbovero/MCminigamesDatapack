@@ -4,7 +4,6 @@ gamerule doImmediateRespawn false
 gamerule keepInventory false
 
 ##Lobby
-tag @a remove queued
 effect clear @a
 clear @a
 xp set @a 0 levels
@@ -26,6 +25,7 @@ team remove 3
 team remove 4
 
 ##Scoreboard 
+scoreboard players reset @e TickTime
 scoreboard objectives setdisplay sidebar
 scoreboard objectives remove Score
 scoreboard players set @a Deaths 0
