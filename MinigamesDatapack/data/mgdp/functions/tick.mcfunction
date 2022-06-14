@@ -1,6 +1,4 @@
-###Detect and activate game
-
-#run games
+###Detect and Activate Games
 execute if score bool KOTH matches 1 run function mgdp:koth/tick
 
 
@@ -18,7 +16,7 @@ execute as @a at @s unless block ~ ~-0.3 ~ magenta_glazed_terracotta unless bloc
 
 ###Lobby Stuff
 execute as @a at @s if entity @s[y=-69,dy=-5] run effect give @s levitation 1 10 true
-execute as @a at @s if entity @s[y=-10,dy=-500] run effect give @s saturation 10 255 true
+execute as @a at @s if entity @s[y=-20,dy=-500] run effect give @s saturation 10 255 true
 
 
 #####Game Start Timers
@@ -52,6 +50,7 @@ execute if score bool KOTHstart matches 18 run title @a[tag=queued] title {"text
     #start game at end of timer
     execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=200}] run function mgdp:koth/start
     execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=200}] run scoreboard players set bool KOTH 1 
+    #remove KOTH queue button
     execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=200}] run setblock 8 -59 -631 air
         ##############disable all other game buttons too?
     execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=200}] run scoreboard players set bool KOTHstart 0
@@ -62,10 +61,3 @@ execute if score bool KOTHstart matches 25.. run kill @e[type=armor_stand,nbt={T
 execute if score bool KOTHstart matches 25.. run tellraw @a {"text":"KOTH queue interrupted","italic":true,"color":"red"}
 execute if score bool KOTHstart matches 25.. run tag @a remove queued 
 execute if score bool KOTHstart matches 25.. run scoreboard players set bool KOTHstart 0
-
-
-###Menu options enabling
-#scoreboard players enable @a whg.mainmenu
-
-###Menu options detecting
-#execute as @a if score @s whg.mainmenu matches 1.. run function milesdp:mainmenu

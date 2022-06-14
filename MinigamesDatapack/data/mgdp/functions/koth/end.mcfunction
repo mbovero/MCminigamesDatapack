@@ -1,31 +1,8 @@
-
-
 ###End KOTH (reset)
-scoreboard players set bool KOTHstart 0
-scoreboard players set bool KOTHend 0
-scoreboard players set @a Deaths 0
-scoreboard players set @a Kills 0
-scoreboard players set @a KillsSuper 0
-scoreboard players reset @a PearlUsed
-scoreboard players set @a TotalKills 0
-scoreboard players set bool GameInSession 0
-scoreboard players set bool KOTH 0
-gamerule doImmediateRespawn false
-gamerule keepInventory false
-team remove 1
-team remove 2
-team remove 3
-team remove 4
-clear @a
-spawnpoint @a 8 -59 8
+function mgdp:reset
 tp @a[tag=queued] 8 -59 8
-tag @a remove queued
-setblock 8 -59 -631 minecraft:stone_button[facing=south] replace
-effect clear @a
 
-
-
-#Winner
+##Determine Winner
 scoreboard players operation max Score > @a Score
 execute as @a if score @s Score = max Score run tag @s add Winner
 title @a[tag=Winner] title {"text":"You win!","bold":true,"color":"green"}
@@ -39,5 +16,3 @@ execute as @a[tag=Loser] run playsound minecraft:item.goat_horn.sound.3 master @
 tag @a remove Loser
 tag @a remove Winner
 scoreboard players reset max Score
-
-scoreboard objectives remove Score
