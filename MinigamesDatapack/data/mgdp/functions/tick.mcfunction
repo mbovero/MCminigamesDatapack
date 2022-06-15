@@ -2,9 +2,6 @@
 execute if score bool KOTH matches 1 run function mgdp:koth/tick
 
 
-
-
-
 ###Boost Pads
 #jump
 execute as @a at @s if block ~ ~-0.7 ~ gray_glazed_terracotta run effect give @s jump_boost 1 5 true
@@ -15,8 +12,14 @@ execute as @a at @s unless block ~ ~-0.3 ~ magenta_glazed_terracotta unless bloc
 
 
 ###Lobby Stuff
+#void hop
 execute as @a at @s if entity @s[y=-69,dy=-5] run effect give @s levitation 1 10 true
+#tp back if glitch through
+execute as @a at @s if entity @s[y=-120,dy=-500] run effect give @s resistance 1 255 true
+execute as @a at @s if entity @s[y=-120,dy=-500] run tp @s 8 -59 8
+#prevent death/starvation
 execute as @a at @s if entity @s[y=-20,dy=-500] run effect give @s saturation 10 255 true
+execute as @a at @s if entity @s[y=-20,dy=-500] run effect give @s regeneration 10 255 true
 #clear team in main lobby
 execute as @a[x=8,y=-59,z=8,distance=..100] run team leave @s
 

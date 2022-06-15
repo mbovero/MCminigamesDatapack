@@ -21,10 +21,9 @@ team leave @a
 #spawning
 gamerule doImmediateRespawn true
 gamerule keepInventory true
-team add 1
-team add 2
-team add 3
-team add 4
+summon armor_stand 8 10 -1200 {Tags:["spawn"],Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b}
+gamerule spawnRadius 0
+setworldspawn 7 14 -1215
 spawnpoint @a[tag=queued] 8 12 -1200
 kill @a[tag=queued]
 gamerule showDeathMessages true

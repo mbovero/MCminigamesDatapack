@@ -1,4 +1,4 @@
-###Load message
+###Load message?
 
 
 #####One-Time SETUP
@@ -19,7 +19,6 @@ tp bigbudderbob 8 -59 8
 ###Scoreboard Initialization
 #armor stand timers
 scoreboard objectives add TickTime dummy
-############forceload add 8 -1200 8 -1200
 #health bar on tab list
 scoreboard objectives add Health health
 scoreboard objectives setdisplay list Health
@@ -51,7 +50,7 @@ scoreboard objectives add KOTHmap dummy
 scoreboard players set mapnum KOTHmap 0
 
 
-###Team Initialization
+###KOTH Team Initialization
 team add Striker
 team modify Striker suffix ["",{"text":" <","bold":true,"color":"gray"},{"text":"Striker","italic":true,"color":"dark_red"},{"text":">","bold":true,"color":"gray"}]
 team add Tank
@@ -62,6 +61,7 @@ team add Warper
 team modify Warper suffix ["",{"text":" <","bold":true,"color":"gray"},{"text":"Warper","italic":true,"color":"dark_purple"},{"text":">","bold":true,"color":"gray"}]
 team add Fisherman
 team modify Fisherman suffix ["",{"text":" <","bold":true,"color":"gray"},{"text":"Fisherman","italic":true,"color":"dark_aqua"},{"text":">","bold":true,"color":"gray"}]
+
 
 ###Reset Scores (and other stuff)
 function mgdp:reset

@@ -1,8 +1,8 @@
 ###Hill
-execute as @a at @s if block ~ ~-0.2 ~ gold_block run scoreboard players add @s Score 1
-execute as @a at @s if block ~ ~-0.2 ~ gold_block run effect give @s glowing 1 255 true
-execute as @a at @s if block ~ ~-2 ~ gold_block run scoreboard players add @s Score 1
-execute as @a at @s if block ~ ~-2 ~ gold_block run effect give @s glowing 1 255 true
+execute as @a at @s if block ~ ~-0.9 ~ gold_block run scoreboard players add @s Score 1
+execute as @a at @s if block ~ ~-0.9 ~ gold_block run effect give @s glowing 1 255 true
+execute as @a at @s if block ~ ~-1.9 ~ gold_block run scoreboard players add @s Score 1
+execute as @a at @s if block ~ ~-1.9 ~ gold_block run effect give @s glowing 1 255 true
 
 ###Void
 execute as @a at @s if entity @s[y=0,dy=-5] run gamerule showDeathMessages true
@@ -12,6 +12,9 @@ execute as @a at @s if entity @s[y=0,dy=-5] run gamerule showDeathMessages false
 ###No Hunger
 execute as @a[nbt={foodLevel:19}] run effect give @s saturation 1 1 true
 execute as @a[nbt={foodLevel:17}] run effect give @s saturation 1 1 true
+
+###Prevent Cheating/Collaboration
+kill @e[type=item]
 
 
 ###Game Timer
@@ -40,23 +43,9 @@ kill @e[type=armor_stand,nbt={Tags:["five_min_timer"]},scores={TickTime=6000..}]
 execute if score bool KOTHend matches 1 run function mgdp:koth/end
 
 
-###Random Spawns            <REWORK>
-team empty 1
-team empty 2
-team empty 3
-team empty 4
-team join 1 @r[team=,tag=queued]
-team join 2 @r[team=,tag=queued]
-team join 3 @r[team=,tag=queued]
-team join 4 @r[team=,tag=queued]
-team join 1 @r[team=,tag=queued]
-team join 2 @r[team=,tag=queued]
-team join 3 @r[team=,tag=queued]
-team join 4 @r[team=,tag=queued]
-execute as @a[team=1] run spawnpoint @s 8 11 -1194
-execute as @a[team=2] run spawnpoint @s 2 11 -1200
-execute as @a[team=3] run spawnpoint @s 8 11 -1206
-execute as @a[team=4] run spawnpoint @s 14 11 -1200
+###Random Spawns
+spreadplayers 8 -1200 3 200 under 11 false @e[tag=spawn]
+execute at @e[tag=spawn] as @a[tag=queued] run spawnpoint
 
 
 

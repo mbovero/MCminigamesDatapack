@@ -1,5 +1,4 @@
-###KOTH
-#detect button press
+###KOTH detect button press
 execute if block 8 -59 -631 stone_button[powered=true] run scoreboard players add buttontick KOTHstart 1
 #start timer on one button press
 execute if score buttontick KOTHstart matches 18 run summon armor_stand 8 -58.15 -630.25 {Tags:["ten_sec_timer"],Invisible:1,Invulnerable:1,NoGravity:1,Marker:1,CustomNameVisible:1b,CustomName:"10"}
