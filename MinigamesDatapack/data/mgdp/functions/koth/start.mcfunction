@@ -13,22 +13,23 @@ scoreboard players set @a Kills 0
 scoreboard players set @a KillsSuper 0
 scoreboard players reset @a PearlUsed
 scoreboard players set @a TotalKills 0
-
-##################Change this for multiple maps
-###Game Setup
 #remove suffixes
 team leave @a
+
+#####Game Setup
+##map detection
+summon armor_stand 8 10 -1200 {Tags:["spawn"],Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b}
+setworldspawn 7 14 -1215
+spawnpoint @a[tag=queued] 8 12 -1200
+summon armor_stand 8 10 -1200 {Tags:["five_min_timer"],Invisible:1,Invulnerable:1,NoGravity:1,Marker:1}
+
+
 #spawning
 gamerule doImmediateRespawn true
 gamerule keepInventory true
-summon armor_stand 8 10 -1200 {Tags:["spawn"],Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b}
 gamerule spawnRadius 0
-setworldspawn 7 14 -1215
-spawnpoint @a[tag=queued] 8 12 -1200
 kill @a[tag=queued]
 gamerule showDeathMessages true
-#timer
-summon armor_stand 8 10 -1200 {Tags:["five_min_timer"],Invisible:1,Invulnerable:1,NoGravity:1,Marker:1}
 #kit give
 scoreboard players set @a[tag=queued] Deaths 1
 gamemode adventure @a

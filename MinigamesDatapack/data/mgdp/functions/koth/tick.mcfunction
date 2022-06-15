@@ -44,7 +44,7 @@ execute if score bool KOTHend matches 1 run function mgdp:koth/end
 
 
 ###Random Spawns
-spreadplayers 8 -1200 3 200 under 11 false @e[tag=spawn]
+execute if score map KOTHmap matches 0 run spreadplayers 8 -1200 3 200 under 11 false @e[tag=spawn]
 execute at @e[tag=spawn] as @a[tag=queued] run spawnpoint
 
 

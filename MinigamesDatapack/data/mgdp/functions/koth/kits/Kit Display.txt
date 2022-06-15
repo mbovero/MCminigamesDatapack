@@ -1,4 +1,15 @@
-Commands for kit selection are as follows:          (striker used as example)
+Armorstand text displays:
+/summon armor_stand 8 -56 -630 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b,CustomName:'{"text":"Selected Map:"}',CustomNameVisible:1b}
+/summon armor_stand 8 -56.5 -630 {Tags:["koth_map_display"],Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b,CustomName:'{"text":"Default"}',CustomNameVisible:1b}
+
+
+Command blocks for map selection:          (default used as example)
+data modify entity @e[tag=koth_map_display,limit=1] CustomName set value '{"text":"Default"}'
+scoreboard players set map KOTHmap 0
+playsound minecraft:entity.villager.work_cartographer master @a ~ ~ ~ 99999999999999 1
+
+
+Command blocks for kit selection:          (striker used as example)
 scoreboard players set @p KOTHkit 10
 team join Striker @p[scores={KOTHkit=10},team=!Striker]
 playsound minecraft:entity.player.attack.sweep master @a ~ ~ ~ 99999999999999 .7
