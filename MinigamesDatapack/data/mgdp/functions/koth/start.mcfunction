@@ -29,6 +29,7 @@ gamerule doImmediateRespawn true
 gamerule keepInventory true
 gamerule spawnRadius 0
 kill @a[tag=queued]
+###############Try just teleporting instead?
 gamerule showDeathMessages true
 #kit give
 scoreboard players set @a[tag=queued] Deaths 1
