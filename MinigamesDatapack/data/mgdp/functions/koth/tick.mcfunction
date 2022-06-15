@@ -95,27 +95,25 @@ execute as @e[type=player,scores={Deaths=1..},tag=queued] as @s run clear @s
     execute as @a[scores={KOTHkit=40,Kills2=3..},tag=queued] as @s run give @s ender_pearl{display:{Name:'"Randomize Player Locations"'}}
     execute as @a[scores={KOTHkit=40,Kills2=3..},tag=queued] as @s run scoreboard players set @s Kills2 0
     #kill super reward
-    execute as @a[scores={KOTHkit=40,KillsSuper=5..},tag=queued] as @s run give @s ender_pearl{display:{Name:'"Tp Highest Scoring Player"'},Enchantments:[{id:"",lvl:1}]}
+    execute as @a[scores={KOTHkit=40,KillsSuper=5..},tag=queued] as @s run give @s ender_pearl{display:{Name:'"Tp Highest Player"'},Enchantments:[{id:"",lvl:1}]}
     execute as @a[scores={KOTHkit=40,KillsSuper=5..},tag=queued] as @s run playsound minecraft:entity.enderman.death master @a ~ ~ ~ 9999999 .7
     execute as @a[scores={KOTHkit=40,KillsSuper=5..},tag=queued] as @s run scoreboard players set @s KillsSuper 0
     #tp @r pearl
-    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Random Player"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] run tp @r[tag=queued]
+    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Random Player"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] at @s run tag @a[distance=0.5..,tag=queued] add WarperTarget
+    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Random Player"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] run tp @r[tag=WarperTarget]
+    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Random Player"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] run tag @a remove WarperTarget
     execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Random Player"'}}}},limit=1] run kill @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Random Player"'}}}}]
     #randomize player locations pearl
     execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Randomize Player Locations"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] at @s run spreadplayers ~ ~ 7 100 false @a[tag=queued]
     execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Randomize Player Locations"'}}}},limit=1] run kill @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Randomize Player Locations"'}}}}]
-    #tp highest scoring player pearl
-    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Highest Scoring Player"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] run scoreboard players operation max Score > @a Score
-    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Highest Scoring Player"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] run execute as @a if score @s Score = max Score run tag @s add WarperTarget
-    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Highest Scoring Player"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] run scoreboard players reset max Score
-    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Highest Scoring Player"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] run tp @p[tag=WarperTarget]
-    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Highest Scoring Player"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] run tag @a remove WarperTarget 
-    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Highest Scoring Player"'}}}},limit=1] run kill @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Highest Scoring Player"'}}}}]
-
-    
-    
-    
-
+    #Tp Highest Player pearl
+    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Highest Player"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] run execute as @a[tag=queued] run execute store result score @s ylevel run data get entity @s Pos[1]
+    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Highest Player"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] run scoreboard players set max ylevel -1000
+    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Highest Player"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] run scoreboard players operation max ylevel > @a[tag=queued] ylevel
+    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Highest Player"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] run execute as @a[tag=queued] if score @s ylevel = max ylevel run tag @s add WarperTarget
+    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Highest Player"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] run tp @p[tag=WarperTarget]
+    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Highest Player"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] run tag @a remove WarperTarget 
+    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Highest Player"'}}}},limit=1] run kill @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Highest Player"'}}}}]
     #reset pearl detection
     execute as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] run scoreboard players reset @s PearlUsed
 

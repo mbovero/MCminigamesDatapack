@@ -39,9 +39,11 @@ scoreboard players reset @a TotalKills
 scoreboard players set bool GameInSession 0
 #KOTH
 scoreboard players set bool KOTH 0
-scoreboard players set bool KOTHstart 0
+scoreboard players set buttontick KOTHstart 0
 scoreboard players set bool KOTHend 0
 scoreboard players reset @a KOTHkit
+scoreboard players reset @a ylevel
 scoreboard players reset @a PearlUsed
+scoreboard players reset max
 
 team leave @a

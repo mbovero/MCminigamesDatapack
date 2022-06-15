@@ -42,8 +42,13 @@ scoreboard objectives add KOTHend dummy
 #KOTH kit detection
 scoreboard objectives add KOTHkit dummy
 scoreboard players set @a KOTHkit 0
+#y-level detection
+scoreboard objectives add ylevel dummy
 #warper pearl detection
 scoreboard objectives add PearlUsed minecraft.used:minecraft.ender_pearl
+#KOTH map detection
+scoreboard objectives add KOTHmap dummy
+scoreboard players set mapnum 0
 
 
 ###Team Initialization

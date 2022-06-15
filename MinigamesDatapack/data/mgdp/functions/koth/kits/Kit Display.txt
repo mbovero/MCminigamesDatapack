@@ -13,11 +13,11 @@ Striker:
 Tank:
 /give @p armor_stand{EntityTag:{DisabledSlots:2039583,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,ArmorItems:[{id:"chainmail_boots",Count:1b},{id:"chainmail_leggings",Count:1b},{id:"chainmail_chestplate",Count:1b},{id:"chainmail_helmet",Count:1b}],HandItems:[{id:"shield",Count:1b},{id:"potion",Count:1b}],CustomName:'{"text":"Tank","color":"dark_blue"}',CustomNameVisible:1b}} 1
 
-Warper:
-/give @p armor_stand{EntityTag:{DisabledSlots:2039583,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,ArmorItems:[{id:"golden_boots",Count:1b},{},{},{id:"golden_helmet",Count:1b}],HandItems:[{id:"golden_shovel",Count:1b},{id:"ender_pearl",Count:1b}],CustomName:'{"text":"Warper","color":"light_purple"}',CustomNameVisible:1b}} 1
-
 Archer:
 /give @p armor_stand{EntityTag:{DisabledSlots:2039583,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,ArmorItems:[{id:"leather_boots",Count:1b,tag:{display:{color:6501632}}},{id:"leather_leggings",Count:1b,tag:{display:{color:6501632}}},{id:"leather_chestplate",Count:1b,tag:{display:{color:6501632}}},{id:"leather_helmet",Count:1b,tag:{display:{color:6501632}}}],HandItems:[{id:"shears",Count:1b},{id:"bow",Count:1b}],CustomName:'{"text":"Archer","color":"dark_green"}',CustomNameVisible:1b}} 1
+
+Warper:
+/give @p armor_stand{EntityTag:{DisabledSlots:2039583,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,ArmorItems:[{id:"golden_boots",Count:1b},{},{},{id:"golden_helmet",Count:1b}],HandItems:[{id:"golden_shovel",Count:1b},{id:"ender_pearl",Count:1b}],CustomName:'{"text":"Warper","color":"light_purple"}',CustomNameVisible:1b}} 1
 
 Fisherman:
 /give @p armor_stand{EntityTag:{DisabledSlots:2039583,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,ArmorItems:[{},{},{},{id:"leather_helmet",Count:1b,tag:{display:{color:6501632}}}],HandItems:[{id:"fishing_rod",Count:1b},{id:"pufferfish",Count:1b}],CustomName:'{"text":"Fisherman","color":"dark_aqua"}',CustomNameVisible:1b}} 1
