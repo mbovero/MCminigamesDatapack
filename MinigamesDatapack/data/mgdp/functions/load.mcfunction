@@ -14,11 +14,12 @@ gamerule doWeatherCycle false
 gamerule mobGriefing false
 #####gamerule sendCommandFeedback false
 
+tp bigbudderbob 8 -59 8
 
 ###Scoreboard Initialization
 #armor stand timers
 scoreboard objectives add TickTime dummy
-forceload add 8 -1200 8 -1200
+############forceload add 8 -1200 8 -1200
 #health bar on tab list
 scoreboard objectives add Health health
 scoreboard objectives setdisplay list Health
@@ -44,6 +45,18 @@ scoreboard players set @a KOTHkit 0
 #warper pearl detection
 scoreboard objectives add PearlUsed minecraft.used:minecraft.ender_pearl
 
+
+###Team Initialization
+team add Striker
+team modify Striker suffix ["",{"text":" <","bold":true,"color":"gray"},{"text":"Striker","italic":true,"color":"dark_red"},{"text":">","bold":true,"color":"gray"}]
+team add Tank
+team modify Tank suffix ["",{"text":" <","bold":true,"color":"gray"},{"text":"Tank","italic":true,"color":"dark_blue"},{"text":">","bold":true,"color":"gray"}]
+team add Archer
+team modify Archer suffix ["",{"text":" <","bold":true,"color":"gray"},{"text":"Archer","italic":true,"color":"dark_green"},{"text":">","bold":true,"color":"gray"}]
+team add Warper
+team modify Warper suffix ["",{"text":" <","bold":true,"color":"gray"},{"text":"Warper","italic":true,"color":"dark_purple"},{"text":">","bold":true,"color":"gray"}]
+team add Fisherman
+team modify Fisherman suffix ["",{"text":" <","bold":true,"color":"gray"},{"text":"Fisherman","italic":true,"color":"dark_aqua"},{"text":">","bold":true,"color":"gray"}]
 
 ###Reset Scores (and other stuff)
 function mgdp:reset

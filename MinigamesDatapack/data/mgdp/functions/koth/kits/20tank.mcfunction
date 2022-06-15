@@ -9,4 +9,5 @@ item replace entity @s weapon.offhand with shield{Damage:250}
 #Give sword
 item replace entity @s hotbar.0 with wooden_sword{Unbreakable:1b}
 #Give health boost
-effect give @s minecraft:health_boost 999999 1 true
+effect give @s health_boost 999999 1 true
+effect give @s regeneration 1 255 true

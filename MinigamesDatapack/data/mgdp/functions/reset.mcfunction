@@ -11,12 +11,15 @@ xp set @a 0 points
 setworldspawn 8 -59 8
 spawnpoint @a 8 -59 8
 gamemode adventure @a
+gamerule showDeathMessages false
 kill @e[type=armor_stand,scores={TickTime=0..}]
 kill @e[type=item]
 
 ##Buttons
 #KOTH
-setblock 8 -59 -631 stone_button[facing=south] replace
+forceload add 8 -631
+setblock 8 -59 -631 stone_button[facing=south]
+forceload remove 8 -631
 
 ##teams for spawns reset    -   REWORK?
 team remove 1
@@ -38,4 +41,7 @@ scoreboard players set bool GameInSession 0
 scoreboard players set bool KOTH 0
 scoreboard players set bool KOTHstart 0
 scoreboard players set bool KOTHend 0
+scoreboard players reset @a KOTHkit
 scoreboard players reset @a PearlUsed
+
+team leave @a

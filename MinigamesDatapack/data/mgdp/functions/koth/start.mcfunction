@@ -16,6 +16,8 @@ scoreboard players set @a TotalKills 0
 
 ##################Change this for multiple maps
 ###Game Setup
+#remove suffixes
+team leave @a
 #spawning
 gamerule doImmediateRespawn true
 gamerule keepInventory true
@@ -25,6 +27,7 @@ team add 3
 team add 4
 spawnpoint @a[tag=queued] 8 12 -1200
 kill @a[tag=queued]
+gamerule showDeathMessages true
 #timer
 summon armor_stand 8 10 -1200 {Tags:["five_min_timer"],Invisible:1,Invulnerable:1,NoGravity:1,Marker:1}
 #kit give
