@@ -17,11 +17,11 @@ execute as @a[nbt={foodLevel:17}] run effect give @s saturation 1 1 true
 ###Game Timer
 #count down display
 scoreboard players add @e[type=armor_stand,nbt={Tags:["five_min_timer"]}] TickTime 1
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=0}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"5","bold":true,"color":"gold"},{"text":" mins","bold":true}]
+    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=1}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"5","bold":true,"color":"gold"},{"text":" mins","bold":true}]
     execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=1200}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"4","bold":true,"color":"gold"},{"text":" mins","bold":true}]
     execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=2400}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"3","bold":true,"color":"gold"},{"text":" mins","bold":true}]
     execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=3600}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"2","bold":true,"color":"gold"},{"text":" mins","bold":true}]
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=4800}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"1","bold":true,"color":"dark_red"},{"text":" mins","bold":true}]
+    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=4800}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"1","bold":true,"color":"dark_red"},{"text":" min","bold":true}]
     execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5400}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"30","bold":true,"color":"dark_red"},{"text":" seconds","bold":true}]
     execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5700}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"15","bold":true,"color":"dark_red"},{"text":" seconds!","bold":true}]
     execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5900}] run tellraw @a {"text":"5","bold":true,"color":"red"}
@@ -40,7 +40,7 @@ kill @e[type=armor_stand,nbt={Tags:["five_min_timer"]},scores={TickTime=6000..}]
 execute if score bool KOTHend matches 1 run function mgdp:koth/end
 
 
-###Random Spawns
+###Random Spawns            <REWORK>
 team empty 1
 team empty 2
 team empty 3
@@ -63,8 +63,14 @@ execute as @a[team=4] run spawnpoint @s 14 11 -1200
 #####Kits
 #clear on death
 execute as @e[type=player,scores={Deaths=1..},tag=queued] as @s run clear @s
+
 ##Striker
     execute as @e[type=player,scores={Deaths=1..,KOTHkit=10},tag=queued] as @s run function mgdp:koth/kits/10striker
+    #kill super reward
+    execute as @a[scores={KOTHkit=10,KillsSuper=5..},tag=queued] as @s run give @s minecraft:potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:11,Amplifier:2,Duration:200}],display:{Name:'"Super Resistance Pot"'}}
+    execute as @a[scores={KOTHkit=10,KillsSuper=5..},tag=queued] as @s run playsound minecraft:block.anvil.use master @a ~ ~ ~ 9999999 .7
+    execute as @a[scores={KOTHkit=10,KillsSuper=5..},tag=queued] as @s run scoreboard players set @s KillsSuper 0
+
 
 ##Tank
     execute as @e[type=player,scores={Deaths=1..,KOTHkit=20},tag=queued] as @s run function mgdp:koth/kits/20tank

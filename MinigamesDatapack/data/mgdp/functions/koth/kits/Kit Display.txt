@@ -8,7 +8,7 @@ These are commands that give armor stands to display the various KOTH kits:
 (created via https://haselkern.com/Minecraft-ArmorStand/)
 
 Striker:
-/give @p armor_stand{EntityTag:{DisabledSlots:2039583,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,ArmorItems:[{},{},{},{id:"netherite_helmet",Count:1b}],HandItems:[{id:"wooden_sword",Count:1b},{}],CustomName:'{"text":"Striker","color":"dark_red"}',CustomNameVisible:1b}} 1
+/give @p armor_stand{EntityTag:{DisabledSlots:2039583,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,ArmorItems:[{},{},{id:"leather_chestplate",Count:1b,tag:{display:{color:6173184}}},{id:"netherite_helmet",Count:1b}],HandItems:[{id:"wooden_sword",Count:1b},{id:"potion",Count:1b}],CustomName:'{"text":"Striker","color":"dark_red"}',CustomNameVisible:1b}} 1
 
 Tank:
 /give @p armor_stand{EntityTag:{DisabledSlots:2039583,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,ArmorItems:[{id:"chainmail_boots",Count:1b},{id:"chainmail_leggings",Count:1b},{id:"chainmail_chestplate",Count:1b},{id:"chainmail_helmet",Count:1b}],HandItems:[{id:"shield",Count:1b},{id:"potion",Count:1b}],CustomName:'{"text":"Tank","color":"dark_blue"}',CustomNameVisible:1b}} 1
