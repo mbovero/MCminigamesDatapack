@@ -18,10 +18,10 @@ team leave @a
 
 #####Game Setup
 ##map detection
-summon armor_stand 8 10 -1200 {Tags:["spawn"],Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b}
-setworldspawn 7 14 -1215
-spawnpoint @a[tag=queued] 8 12 -1200
-summon armor_stand 8 10 -1200 {Tags:["five_min_timer"],Invisible:1,Invulnerable:1,NoGravity:1,Marker:1}
+execute if score map KOTHmap matches 0 run summon armor_stand 8 10 -1200 {Tags:["spawn"],Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b}
+execute if score map KOTHmap matches 0 run setworldspawn 7 14 -1215
+execute if score map KOTHmap matches 0 run spawnpoint @a[tag=queued] 8 12 -1200
+execute if score map KOTHmap matches 0 run summon armor_stand 8 10 -1200 {Tags:["five_min_timer"],Invisible:1,Invulnerable:1,NoGravity:1,Marker:1}
 
 
 #spawning
