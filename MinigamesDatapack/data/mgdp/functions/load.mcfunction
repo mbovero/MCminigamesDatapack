@@ -48,7 +48,7 @@ scoreboard objectives add ylevel dummy
 scoreboard objectives add PearlUsed minecraft.used:minecraft.ender_pearl
 #KOTH map detection
 scoreboard objectives add KOTHmap dummy
-scoreboard players set mapnum 0
+scoreboard players set mapnum KOTHmap 0
 
 
 ###Team Initialization
