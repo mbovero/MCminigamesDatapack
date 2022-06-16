@@ -11,6 +11,6 @@ item replace entity @s hotbar.1 with bow{Unbreakable:1b,Enchantments:[{id:"punch
 #Give piercing crossbow
 item replace entity @s hotbar.2 with crossbow{Unbreakable:1b,Enchantments:[{id:"piercing",lvl:1}]}
 #Give shears as small knife
-item replace entity @s hotbar.0 with shears{Unbreakable:1b,Enchantments:[{id:"sharpness",lvl:3}]}
+item replace entity @s hotbar.0 with shears{Unbreakable:1b,Enchantments:[{id:"sharpness",lvl:3}],display:{Name:'"Battle Shears"'}}
 #Give arrows
 item replace entity @s hotbar.3 with arrow 10

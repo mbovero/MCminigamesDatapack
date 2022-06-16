@@ -27,6 +27,9 @@ Tank:
 Archer:
 /give @p armor_stand{EntityTag:{DisabledSlots:2039583,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,ArmorItems:[{id:"leather_boots",Count:1b,tag:{display:{color:6501632}}},{id:"leather_leggings",Count:1b,tag:{display:{color:6501632}}},{id:"leather_chestplate",Count:1b,tag:{display:{color:6501632}}},{id:"leather_helmet",Count:1b,tag:{display:{color:6501632}}}],HandItems:[{id:"shears",Count:1b},{id:"bow",Count:1b}],CustomName:'{"text":"Archer","color":"dark_green"}',CustomNameVisible:1b}} 1
 
+Sniper:
+/give @p armor_stand{EntityTag:{DisabledSlots:2039583,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,ArmorItems:[{},{},{id:"iron_chestplate",Count:1b},{}],HandItems:[{id:"bow",Count:1b},{id:"firework_rocket",Count:1b}],CustomName:'{"text":"Sniper","color":"dark_green"}',CustomNameVisible:1b}} 1
+
 Warper:
 /give @p armor_stand{EntityTag:{DisabledSlots:2039583,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,ArmorItems:[{id:"golden_boots",Count:1b},{},{},{id:"golden_helmet",Count:1b}],HandItems:[{id:"golden_shovel",Count:1b},{id:"ender_pearl",Count:1b}],CustomName:'{"text":"Warper","color":"light_purple"}',CustomNameVisible:1b}} 1
 

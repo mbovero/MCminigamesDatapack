@@ -14,7 +14,7 @@ gamerule doWeatherCycle false
 gamerule mobGriefing false
 #####gamerule sendCommandFeedback false
 
-tp bigbudderbob 8 -59 8
+tp bigbudderbob -16 -44 -18
 
 ###Scoreboard Initialization
 #armor stand timers
@@ -57,6 +57,8 @@ team add Tank
 team modify Tank suffix ["",{"text":" <","bold":true,"color":"gray"},{"text":"Tank","italic":true,"color":"dark_blue"},{"text":">","bold":true,"color":"gray"}]
 team add Archer
 team modify Archer suffix ["",{"text":" <","bold":true,"color":"gray"},{"text":"Archer","italic":true,"color":"dark_green"},{"text":">","bold":true,"color":"gray"}]
+team add Sniper
+team modify Sniper suffix ["",{"text":" <","bold":true,"color":"gray"},{"text":"Sniper","italic":true,"color":"dark_green"},{"text":">","bold":true,"color":"gray"}]
 team add Warper
 team modify Warper suffix ["",{"text":" <","bold":true,"color":"gray"},{"text":"Warper","italic":true,"color":"dark_purple"},{"text":">","bold":true,"color":"gray"}]
 team add Fisherman

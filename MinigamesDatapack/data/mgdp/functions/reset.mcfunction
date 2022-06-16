@@ -9,8 +9,8 @@ clear @a
 xp set @a 0 levels
 xp set @a 0 points
 gamerule spawnRadius 0
-setworldspawn 8 -59 8
-spawnpoint @a 8 -59 8
+setworldspawn -16 -44 -18
+spawnpoint @a -16 -43 -18
 gamemode adventure @a
 gamerule showDeathMessages false
 kill @e[type=armor_stand,scores={TickTime=0..}]

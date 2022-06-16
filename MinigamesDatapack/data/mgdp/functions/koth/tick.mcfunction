@@ -5,9 +5,9 @@ execute as @a at @s if block ~ ~-1.9 ~ gold_block run scoreboard players add @s 
 execute as @a at @s if block ~ ~-1.9 ~ gold_block run effect give @s glowing 1 255 true
 
 ###Void
-execute as @a at @s if entity @s[y=0,dy=-5] run gamerule showDeathMessages true
-execute as @a at @s if entity @s[y=0,dy=-5] run kill @s
 execute as @a at @s if entity @s[y=0,dy=-5] run gamerule showDeathMessages false
+execute as @a at @s if entity @s[y=0,dy=-5] run kill @s
+execute as @a at @s if entity @s[y=0,dy=-5] run gamerule showDeathMessages true
 
 ###No Hunger
 execute as @a[nbt={foodLevel:19}] run effect give @s saturation 1 1 true
@@ -80,6 +80,19 @@ execute as @e[type=player,scores={Deaths=1..},tag=queued] as @s run clear @s
     execute as @a[scores={KOTHkit=30,KillsSuper=5..},tag=queued] as @s run give @s bow{Damage:379,Enchantments:[{id:"punch",lvl:3},{id:"power",lvl:5}],display:{Name:'"Super Bow"'}}
     execute as @a[scores={KOTHkit=30,KillsSuper=5..},tag=queued] as @s run playsound minecraft:entity.villager.work_fletcher master @a ~ ~ ~ 9999999 .7
     execute as @a[scores={KOTHkit=30,KillsSuper=5..},tag=queued] as @s run scoreboard players set @s KillsSuper 0
+
+##Sniper
+    execute as @e[type=player,scores={Deaths=1..,KOTHkit=31},tag=queued] as @s run function mgdp:koth/kits/31sniper
+    #kill reward
+    execute as @a[scores={KOTHkit=31,Kills=3..},tag=queued] as @s run give @s arrow 6
+    execute as @a[scores={KOTHkit=31,Kills=3..},tag=queued] as @s run scoreboard players set @s Kills 0
+    #kill super reward
+    execute as @a[scores={KOTHkit=31,KillsSuper=5..},tag=queued] as @s run #give @s crossbow{display:{Name:'{"text":"Super Rocket Launcher"}'},Damage:464,ChargedProjectiles:[{id:"minecraft:firework_rocket",Count:1b,tag:{Fireworks:{Flight:20b,Explosions:[{Type:1,Colors:[I;16744207]},{Type:1,Colors:[I;16711680]},{Type:4,Colors:[I;5723991]},{Type:4,Colors:[I;16777215]},{Type:4,Colors:[I;0]},{Type:4,Colors:[I;16766211]}]}}},{id:"minecraft:firework_rocket",Count:1b,tag:{Fireworks:{Flight:20b,Explosions:[{Type:1,Colors:[I;16744207]},{Type:1,Colors:[I;16711680]},{Type:4,Colors:[I;5723991]},{Type:4,Colors:[I;16777215]}]}}},{id:"minecraft:firework_rocket",Count:1b,tag:{Fireworks:{Flight:20b,Explosions:[{Type:1,Colors:[I;16744207]},{Type:1,Colors:[I;16711680]},{Type:4,Colors:[I;5723991]},{Type:4,Colors:[I;16777215]}]}}}],Charged:1b} 1item replace entity @s hotbar.0 with flint{Enchantments:[{id:"sharpness",lvl:3}],display:{Name:'"Combat Knife"'}}
+    execute as @a[scores={KOTHkit=31,KillsSuper=5..},tag=queued] as @s run playsound minecraft:entity.firework_rocket.large_blast_far master @a ~ ~ ~ 9999999 .7
+    execute as @a[scores={KOTHkit=31,KillsSuper=5..},tag=queued] as @s run scoreboard players set @s KillsSuper 0
+    #slowness when holding bow
+    execute as @a[scores={KOTHkit=31},tag=queued,nbt={SelectedItem:{id:"minecraft:bow",tag:{display:{Name:'"Sniper"'}}}}] run effect give @s minecraft:slowness 1 4 true
+    execute as @a[scores={KOTHkit=31},tag=queued,nbt={Inventory:[{Slot:-106b,id:"minecraft:bow",tag:{display:{Name:'"Sniper"'}}}]}] run effect give @s minecraft:slowness 1 4 true
 
 ##Warper
     execute as @e[type=player,scores={Deaths=1..,KOTHkit=40},tag=queued] as @s run function mgdp:koth/kits/40warper

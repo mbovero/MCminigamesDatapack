@@ -16,5 +16,5 @@ scoreboard players reset max Score
 
 ###End KOTH (reset)
 function mgdp:reset
-tp @a[tag=queued] 8 -59 8
+tp @a[tag=queued] -16 -44 -18
 tag @a remove queued
