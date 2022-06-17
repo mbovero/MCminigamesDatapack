@@ -1,6 +1,8 @@
-Armorstand text displays:
-/summon armor_stand 8 -56 -630 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b,CustomName:'{"text":"Selected Map:"}',CustomNameVisible:1b}
-/summon armor_stand 8 -56.5 -630 {Tags:["koth_map_display"],Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b,CustomName:'{"text":"Default"}',CustomNameVisible:1b}
+AEC text displays:
+/summon area_effect_cloud 8 -56 -630 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,CustomName:'{"text":"Selected Map:"}',CustomNameVisible:1b}
+/summon area_effect_cloud 8 -57 -630 {Tags:["koth_map_display"],Age:-2147483648,Duration:-1,WaitTime:-2147483648,CustomName:'{"text":"Default"}',CustomNameVisible:1b}
+/summon area_effect_cloud 12 -59 -602 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,CustomName:'{"text":"Maps"}',CustomNameVisible:1b}
+/summon area_effect_cloud 4 -59 -602 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,CustomName:'{"text":"Kits"}',CustomNameVisible:1b}
 
 
 Command blocks for map selection:          (default used as example)

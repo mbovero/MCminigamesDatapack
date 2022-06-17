@@ -14,7 +14,7 @@ spawnpoint @a -16 -43 -18
 gamemode adventure @a
 gamerule showDeathMessages false
 kill @e[type=armor_stand,scores={TickTime=0..}]
-kill @e[type=armor_stand,tag=spawn]
+kill @e[type=area_effect_cloud,tag=spawn]
 kill @e[type=item]
 
 ##Hub reset
@@ -41,6 +41,7 @@ scoreboard players set bool KOTHend 0
 scoreboard players reset @a KOTHkit
 scoreboard players reset @a ylevel
 scoreboard players reset @a PearlUsed
+scoreboard players set map KOTHmap 0
 scoreboard players reset max
 
 team leave @a

@@ -8,5 +8,5 @@ item replace entity @s armor.feet with golden_boots{Unbreakable:1b}
 item replace entity @s hotbar.0 with golden_shovel{Unbreakable:1b,Enchantments:[{id:"knockback",lvl:1}]}
 
 #Give tp @r pearl
-item replace entity @s hotbar.1 with ender_pearl{display:{Name:'"Tp Random Player"'}}
+item replace entity @s hotbar.1 with ender_pearl{display:{Name:'"Tp Random Location"'}}
 
