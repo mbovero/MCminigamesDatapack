@@ -17,10 +17,11 @@ kill @e[type=armor_stand,scores={TickTime=0..}]
 kill @e[type=armor_stand,tag=spawn]
 kill @e[type=item]
 
-##Buttons
+##Hub reset
 #KOTH
 forceload add 8 -631
 setblock 8 -59 -631 stone_button[facing=south]
+data modify entity @e[tag=koth_map_display,limit=1] CustomName set value '{"text":"Test"}'
 forceload remove 8 -631
 
 ##Scoreboard 

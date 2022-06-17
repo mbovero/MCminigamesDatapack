@@ -13,7 +13,7 @@ execute as @a at @s if entity @s[y=0,dy=-5] run gamerule showDeathMessages true
 execute as @a[nbt={foodLevel:19}] run effect give @s saturation 1 1 true
 execute as @a[nbt={foodLevel:17}] run effect give @s saturation 1 1 true
 
-###Prevent Cheating/Collaboration
+###Prevent Cheating/Collaboration     -   better alternative?
 kill @e[type=item]
 
 
@@ -45,6 +45,7 @@ execute if score bool KOTHend matches 1 run function mgdp:koth/end
 
 ###Random Spawns
 execute if score map KOTHmap matches 0 run spreadplayers 8 -1200 3 200 under 11 false @e[tag=spawn]
+execute if score map KOTHmap matches 1 run spreadplayers -900 0 3 200 under 12 false @e[tag=spawn]
 execute at @e[tag=spawn] as @a[tag=queued] run spawnpoint
 
 
@@ -112,7 +113,7 @@ execute as @e[type=player,scores={Deaths=1..},tag=queued] as @s run clear @s
     execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Random Player"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] run tag @a remove WarperTarget
     execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Random Player"'}}}},limit=1] run kill @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Random Player"'}}}}]
     #randomize player locations pearl
-    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Randomize Player Locations"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] at @s run spreadplayers ~ ~ 7 100 false @a[tag=queued]
+    execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Randomize Player Locations"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] at @s run spreadplayers ~ ~ 5 70 false @a[tag=queued]
     execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Randomize Player Locations"'}}}},limit=1] run kill @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Randomize Player Locations"'}}}}]
     #Tp Highest Player pearl
     execute if entity @e[type=minecraft:ender_pearl,nbt={Item:{id:"minecraft:ender_pearl",Count:1b,tag:{display:{Name:'"Tp Highest Player"'}}}},limit=1] as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] run execute as @a[tag=queued] run execute store result score @s ylevel run data get entity @s Pos[1]
