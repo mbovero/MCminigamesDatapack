@@ -19,7 +19,7 @@ kill @e[type=item]
 
 ###Game Timer
 #count down display
-scoreboard players add @e[type=armor_stand,nbt={Tags:["five_min_timer"]}] TickTime 1
+scoreboard players add @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]}] TickTime 1
     execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=1}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"5","bold":true,"color":"gold"},{"text":" mins","bold":true}]
     execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=1200}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"4","bold":true,"color":"gold"},{"text":" mins","bold":true}]
     execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=2400}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"3","bold":true,"color":"gold"},{"text":" mins","bold":true}]
@@ -65,8 +65,10 @@ execute as @e[type=player,scores={Deaths=1..},tag=queued] as @s run clear @s
     execute as @e[type=player,scores={Deaths=1..,KOTHkit=11},tag=queued] as @s run function mgdp:koth/kits/11orc
     #kill reward
     execute as @a[scores={KOTHkit=11,Kills=3..},tag=queued] as @s run give @s minecraft:potion{CustomPotionEffects:[{Id:10,Amplifier:1,Duration:200,Ambient:1b}],CustomPotionColor:11299688,display:{Name:'"Orc Regen"'}}
+    execute as @a[scores={KOTHkit=11,Kills=3..},tag=queued] as @s run scoreboard players set @s Kills 0
     #kill reward 2
     execute as @a[scores={KOTHkit=11,Kills2=5..},tag=queued] as @s run give @s minecraft:potion{CustomPotionEffects:[{Id:11,Duration:600,Ambient:1b}],CustomPotionColor:9131600,display:{Name:'"Orc Resistance"'}}
+    execute as @a[scores={KOTHkit=11,Kills2=5..},tag=queued] as @s run scoreboard players set @s Kills2 0
     #kill super reward
     #execute as @a[scores={KOTHkit=11,KillsSuper=5..},tag=queued] as @s 
         #trying to make it so the item can be used 3 times to groundpound around them
