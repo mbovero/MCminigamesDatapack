@@ -11,9 +11,8 @@
     execute as @a[scores={hub=1..}] run tp 5 -11 40
     scoreboard players set @a hub 0
 
-#KOTH
-    #Kit selection
-    scoreboard players enable @a kit
+
+    
 
 
 
