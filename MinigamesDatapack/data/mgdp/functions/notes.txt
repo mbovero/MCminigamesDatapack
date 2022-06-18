@@ -1,3 +1,12 @@
+
+##Syntax
+    Tags spaced with underscores. ex: Tags_are_cool
+    Scores are continuous. ex: score1HasNoUnderscores
+        *capitalization is optional
+
+
+##KOTH
+
 0 - default
 1 - damage
 2 - tank
