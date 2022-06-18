@@ -18,15 +18,15 @@ team leave @a
 
 #####Game Setup
 ##map detection
-execute if score map KOTHmap matches 0 run summon armor_stand 8 10 -1200 {Tags:["spawn"],Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b}
+execute if score map KOTHmap matches 0 run summon area_effect_cloud 8 10 -1200 {Tags:["spawn"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 execute if score map KOTHmap matches 0 run setworldspawn 7 14 -1215
 execute if score map KOTHmap matches 0 run spawnpoint @a[tag=queued] 8 12 -1200
-execute if score map KOTHmap matches 0 run summon armor_stand 8 10 -1200 {Tags:["five_min_timer"],Invisible:1,Invulnerable:1,NoGravity:1,Marker:1}
+execute if score map KOTHmap matches 0 run summon area_effect_cloud 8 10 -1200 {Tags:["five_min_timer"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 #castle of dreams
 execute if score map KOTHmap matches 1 run summon area_effect_cloud -900 12 0 {Tags:["spawn"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 execute if score map KOTHmap matches 1 run setworldspawn -904 12 7
 execute if score map KOTHmap matches 1 run spawnpoint @a[tag=queued] -900 12 2
-execute if score map KOTHmap matches 1 run summon armor_stand -900 12 0 {Tags:["five_min_timer"],Invisible:1,Invulnerable:1,NoGravity:1,Marker:1}
+execute if score map KOTHmap matches 1 run summon area_effect_cloud -900 12 0 {Tags:["five_min_timer"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 
 
 #spawning

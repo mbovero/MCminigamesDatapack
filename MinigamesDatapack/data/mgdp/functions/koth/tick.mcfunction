@@ -62,13 +62,13 @@ execute as @e[type=player,scores={Deaths=1..},tag=queued] as @s run clear @s
     execute as @a[scores={KOTHkit=10,KillsSuper=5..},tag=queued] as @s run scoreboard players set @s KillsSuper 0
 
 ##Orc
-    execute as @e[type=player,scores={Deaths=1..,KOTHkit=10},tag=queued] as @s run function mgdp:koth/kits/11orc
+    execute as @e[type=player,scores={Deaths=1..,KOTHkit=11},tag=queued] as @s run function mgdp:koth/kits/11orc
     #kill reward
     execute as @a[scores={KOTHkit=11,Kills=3..},tag=queued] as @s run give @s minecraft:potion{CustomPotionEffects:[{Id:10,Amplifier:1,Duration:200,Ambient:1b}],CustomPotionColor:11299688,display:{Name:'"Orc Regen"'}}
     #kill reward 2
     execute as @a[scores={KOTHkit=11,Kills2=5..},tag=queued] as @s run give @s minecraft:potion{CustomPotionEffects:[{Id:11,Duration:600,Ambient:1b}],CustomPotionColor:9131600,display:{Name:'"Orc Resistance"'}}
     #kill super reward
-    #execute as @a[scores={KOTHkit=11,KillsSuper=10..},tag=queued] as @s 
+    #execute as @a[scores={KOTHkit=11,KillsSuper=5..},tag=queued] as @s 
         #trying to make it so the item can be used 3 times to groundpound around them
 
 

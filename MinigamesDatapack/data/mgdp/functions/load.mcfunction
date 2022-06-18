@@ -52,6 +52,8 @@ scoreboard objectives add KOTHmap dummy
 ###KOTH Team Initialization
 team add Striker
 team modify Striker suffix ["",{"text":" <","bold":true,"color":"gray"},{"text":"Striker","italic":true,"color":"dark_red"},{"text":">","bold":true,"color":"gray"}]
+team add Orc
+team modify Orc suffix ["",{"text":" <","bold":true,"color":"gray"},{"text":"Orc","italic":true,"color":"dark_red"},{"text":">","bold":true,"color":"gray"}]
 team add Tank
 team modify Tank suffix ["",{"text":" <","bold":true,"color":"gray"},{"text":"Tank","italic":true,"color":"dark_blue"},{"text":">","bold":true,"color":"gray"}]
 team add Archer
