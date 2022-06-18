@@ -29,11 +29,11 @@ forceload remove 8 -631
 scoreboard players reset @e TickTime
 scoreboard objectives setdisplay sidebar
 scoreboard objectives remove Score
-scoreboard players set @a Deaths 0
-scoreboard players reset @a Kills
-scoreboard players reset @a Kills2
-scoreboard players reset @a KillsSuper
-scoreboard players reset @a TotalKills
+scoreboard players set @a KOTHdeaths 0
+scoreboard players reset @a KOTHkills
+scoreboard players reset @a KOTHkills2
+scoreboard players reset @a KOTHkillssuper
+scoreboard players reset @a KOTHtotalkills
 scoreboard players set bool GameInSession 0
 #KOTH
 scoreboard players set bool KOTH 0
