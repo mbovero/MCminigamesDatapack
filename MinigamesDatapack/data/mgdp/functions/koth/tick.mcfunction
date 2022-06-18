@@ -20,26 +20,26 @@ kill @e[type=item]
 ###Game Timer
 #count down display
 scoreboard players add @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]}] TickTime 1
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=1}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"5","bold":true,"color":"gold"},{"text":" mins","bold":true}]
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=1200}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"4","bold":true,"color":"gold"},{"text":" mins","bold":true}]
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=2400}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"3","bold":true,"color":"gold"},{"text":" mins","bold":true}]
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=3600}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"2","bold":true,"color":"gold"},{"text":" mins","bold":true}]
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=4800}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"1","bold":true,"color":"dark_red"},{"text":" min","bold":true}]
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5400}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"30","bold":true,"color":"dark_red"},{"text":" seconds","bold":true}]
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5700}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"15","bold":true,"color":"dark_red"},{"text":" seconds!","bold":true}]
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5900}] run tellraw @a {"text":"5","bold":true,"color":"red"}
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5900}] run playsound block.note_block.chime master @a ~ ~ ~ 9999999999999999999999999 2
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5920}] run tellraw @a {"text":"4","bold":true,"color":"red"}
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5920}] run playsound block.note_block.chime master @a ~ ~ ~ 9999999999999999999999999 1.8
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5940}] run tellraw @a {"text":"3","bold":true,"color":"red"}
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5940}] run playsound block.note_block.chime master @a ~ ~ ~ 9999999999999999999999999 1.6
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5960}] run tellraw @a {"text":"2","bold":true,"color":"red"}
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5960}] run playsound block.note_block.chime master @a ~ ~ ~ 9999999999999999999999999 1.4
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5980}] run tellraw @a {"text":"1","bold":true,"color":"red"}
-    execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5980}] run playsound block.note_block.chime master @a ~ ~ ~ 9999999999999999999999999 .1
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=1}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"5","bold":true,"color":"gold"},{"text":" mins","bold":true}]
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=1200}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"4","bold":true,"color":"gold"},{"text":" mins","bold":true}]
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=2400}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"3","bold":true,"color":"gold"},{"text":" mins","bold":true}]
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=3600}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"2","bold":true,"color":"gold"},{"text":" mins","bold":true}]
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=4800}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"1","bold":true,"color":"dark_red"},{"text":" min","bold":true}]
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5400}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"30","bold":true,"color":"dark_red"},{"text":" seconds","bold":true}]
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5700}] run tellraw @a ["",{"text":"Game ends in ","bold":true},{"text":"15","bold":true,"color":"dark_red"},{"text":" seconds!","bold":true}]
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5900}] run tellraw @a {"text":"5","bold":true,"color":"red"}
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5900}] run playsound block.note_block.chime master @a ~ ~ ~ 9999999999999999999999999 2
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5920}] run tellraw @a {"text":"4","bold":true,"color":"red"}
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5920}] run playsound block.note_block.chime master @a ~ ~ ~ 9999999999999999999999999 1.8
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5940}] run tellraw @a {"text":"3","bold":true,"color":"red"}
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5940}] run playsound block.note_block.chime master @a ~ ~ ~ 9999999999999999999999999 1.6
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5960}] run tellraw @a {"text":"2","bold":true,"color":"red"}
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5960}] run playsound block.note_block.chime master @a ~ ~ ~ 9999999999999999999999999 1.4
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5980}] run tellraw @a {"text":"1","bold":true,"color":"red"}
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5980}] run playsound block.note_block.chime master @a ~ ~ ~ 9999999999999999999999999 .1
 #end game at end of timer
-execute if entity @e[type=armor_stand,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=6000..}] run scoreboard players set bool KOTHend 1
-kill @e[type=armor_stand,nbt={Tags:["five_min_timer"]},scores={TickTime=6000..}]
+execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=6000..}] run scoreboard players set bool KOTHend 1
+kill @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},scores={TickTime=6000..}]
 execute if score bool KOTHend matches 1 run function mgdp:koth/end
 
 
@@ -64,10 +64,10 @@ execute as @e[type=player,scores={Deaths=1..},tag=queued] as @s run clear @s
 ##Orc
     execute as @e[type=player,scores={Deaths=1..,KOTHkit=11},tag=queued] as @s run function mgdp:koth/kits/11orc
     #kill reward
-    execute as @a[scores={KOTHkit=11,Kills=3..},tag=queued] as @s run give @s minecraft:potion{CustomPotionEffects:[{Id:10,Amplifier:1,Duration:200,Ambient:1b}],CustomPotionColor:11299688,display:{Name:'"Orc Regen"'}}
+    execute as @a[scores={KOTHkit=11,Kills=3..},tag=queued] as @s run give @s minecraft:potion{CustomPotionEffects:[{Id:10,Amplifier:3,Duration:400,Ambient:1b},{Id:5,Amplifier:1,Duration:400,Ambient:1b}],CustomPotionColor:11299688,display:{Name:'"Orc Boost Pot"'}}
     execute as @a[scores={KOTHkit=11,Kills=3..},tag=queued] as @s run scoreboard players set @s Kills 0
     #kill reward 2
-    execute as @a[scores={KOTHkit=11,Kills2=5..},tag=queued] as @s run give @s minecraft:potion{CustomPotionEffects:[{Id:11,Duration:600,Ambient:1b}],CustomPotionColor:9131600,display:{Name:'"Orc Resistance"'}}
+    execute as @a[scores={KOTHkit=11,Kills2=5..},tag=queued] as @s run give @s minecraft:potion{CustomPotionEffects:[{Id:11,Duration:600,Ambient:1b}],CustomPotionColor:9131600,display:{Name:'"Orc Resistance Pot"'}}
     execute as @a[scores={KOTHkit=11,Kills2=5..},tag=queued] as @s run scoreboard players set @s Kills2 0
     #kill super reward
     #execute as @a[scores={KOTHkit=11,KillsSuper=5..},tag=queued] as @s 
@@ -100,7 +100,7 @@ execute as @e[type=player,scores={Deaths=1..},tag=queued] as @s run clear @s
     execute as @a[scores={KOTHkit=31,Kills=3..},tag=queued] as @s run give @s arrow 6
     execute as @a[scores={KOTHkit=31,Kills=3..},tag=queued] as @s run scoreboard players set @s Kills 0
     #kill super reward
-    execute as @a[scores={KOTHkit=31,KillsSuper=5..},tag=queued] as @s run give @s crossbow{display:{Name:'{"text":"Super Rocket Launcher"}'},Damage:464,ChargedProjectiles:[{id:"minecraft:firework_rocket",Count:1b,tag:{Fireworks:{Flight:20b,Explosions:[{Type:1,Colors:[I;16744207]},{Type:1,Colors:[I;16711680]},{Type:4,Colors:[I;5723991]},{Type:4,Colors:[I;16777215]},{Type:4,Colors:[I;0]},{Type:4,Colors:[I;16766211]}]}}},{id:"minecraft:firework_rocket",Count:1b,tag:{Fireworks:{Flight:20b,Explosions:[{Type:1,Colors:[I;16744207]},{Type:1,Colors:[I;16711680]},{Type:4,Colors:[I;5723991]},{Type:4,Colors:[I;16777215]}]}}},{id:"minecraft:firework_rocket",Count:1b,tag:{Fireworks:{Flight:20b,Explosions:[{Type:1,Colors:[I;16744207]},{Type:1,Colors:[I;16711680]},{Type:4,Colors:[I;5723991]},{Type:4,Colors:[I;16777215]}]}}}],Charged:1b} 1
+    execute as @a[scores={KOTHkit=31,KillsSuper=5..},tag=queued] as @s run give @s crossbow{display:{Name:'{"text":"Super Rocket Launcher"}'},Damage:464,ChargedProjectiles:[{id:"minecraft:firework_rocket",Count:1b,tag:{Fireworks:{Flight:20b,Explosions:[{Type:1,Colors:[I;16711680]},{Type:1,Colors:[I;16744448]},{Type:1,Colors:[I;16763904]},{Type:1,Colors:[I;16777215]},{Type:1,Colors:[I;11776947]},{Type:0,Colors:[I;16736003]},{Type:1,Colors:[I;4539717]},{Type:1,Colors:[I;16727040]},{Type:1,Colors:[I;16765468]},{Type:1,Colors:[I;16711680]},{Type:1,Colors:[I;13750737]}]}}},{},{}],Charged:1b} 1
     execute as @a[scores={KOTHkit=31,KillsSuper=5..},tag=queued] as @s run playsound minecraft:entity.firework_rocket.large_blast_far master @a ~ ~ ~ 9999999 .7
     execute as @a[scores={KOTHkit=31,KillsSuper=5..},tag=queued] as @s run scoreboard players set @s KillsSuper 0
     #slowness when holding bow
@@ -142,7 +142,7 @@ execute as @e[type=player,scores={Deaths=1..},tag=queued] as @s run clear @s
 ##Fisherman
     execute as @e[type=player,scores={Deaths=1..,KOTHkit=50},tag=queued] as @s run function mgdp:koth/kits/50fisherman
     #kill super reward
-    execute as @a[scores={KOTHkit=50,KillsSuper=5..},tag=queued] as @s run give @s golden_chestplate{display:{Name:'"Super Pufferfish Chestplate"'},Enchantments:[{id:"thorns",lvl:20}],Damage:102}
+    execute as @a[scores={KOTHkit=50,KillsSuper=5..},tag=queued] as @s run give @s golden_chestplate{display:{Name:'"Super Pufferfish Chestplate"'},Enchantments:[{id:"thorns",lvl:20}],Damage:92}
     execute as @a[scores={KOTHkit=50,KillsSuper=5..},tag=queued] as @s run playsound minecraft:entity.puffer_fish.blow_up master @a ~ ~ ~ 9999999 .7
     execute as @a[scores={KOTHkit=50,KillsSuper=5..},tag=queued] as @s run scoreboard players set @s KillsSuper 0
 

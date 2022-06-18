@@ -22,7 +22,7 @@ kill @e[type=item]
 #KOTH
 forceload add 8 -631
 setblock 8 -59 -631 stone_button[facing=south]
-data modify entity @e[tag=koth_map_display,limit=1] CustomName set value '{"text":"Test"}'
+#data modify entity @e[type=area_effect_cloud,tag=koth_map_display,limit=1] CustomName set value '{"text":"Test"}'
 forceload remove 8 -631
 
 ##Scoreboard 
@@ -42,7 +42,7 @@ scoreboard players set bool KOTHend 0
 scoreboard players reset @a KOTHkit
 scoreboard players reset @a ylevel
 scoreboard players reset @a PearlUsed
-scoreboard players set map KOTHmap 0
+#scoreboard players set map KOTHmap 0
 scoreboard players reset max
 
 team leave @a
