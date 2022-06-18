@@ -55,7 +55,7 @@ execute at @e[type=area_effect_cloud,tag=spawn] as @a[tag=queued] run spawnpoint
 execute as @e[type=player,scores={Deaths=1..},tag=queued] as @s run clear @s
 
 ##Striker
-    execute as @e[type=player,scores={Deaths=1..,KOTHkit=10},tag=queued] as @s run function mgdp:koth/kits/10striker
+    execute as @e[type=player,scores={Deaths=1..,KOTHkit=10},tag=queued] as @s run function mgdp:koth/kits/10striker/10striker
     #kill super reward
     execute as @a[scores={KOTHkit=10,KillsSuper=5..},tag=queued] as @s run give @s minecraft:potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:11,Amplifier:2,Duration:200}],display:{Name:'"Super Resistance Pot"'}}
     execute as @a[scores={KOTHkit=10,KillsSuper=5..},tag=queued] as @s run playsound minecraft:block.anvil.use master @a ~ ~ ~ 9999999 .7
@@ -74,8 +74,8 @@ execute as @e[type=player,scores={Deaths=1..},tag=queued] as @s run clear @s
         #trying to make it so the item can be used 3 times to groundpound around them
 
 
-##Tank
-    execute as @e[type=player,scores={Deaths=1..,KOTHkit=20},tag=queued] as @s run function mgdp:koth/kits/20tank
+##Knight
+    execute as @e[type=player,scores={Deaths=1..,KOTHkit=20},tag=queued] as @s run function mgdp:koth/kits/20knight
     #kill reward
     execute as @a[scores={KOTHkit=20,Kills=3..},tag=queued] as @s run give @s shield{Damage:250} 1
     execute as @a[scores={KOTHkit=20,Kills=3..},tag=queued] as @s run scoreboard players set @s Kills 0
