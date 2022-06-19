@@ -55,14 +55,14 @@ execute at @e[type=area_effect_cloud,tag=spawn] as @a[tag=queued] run spawnpoint
 execute as @e[type=player,scores={KOTHdeaths=1..},tag=queued] as @s run clear @s
 
 ##Striker
-    execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=10},tag=queued] as @s run function mgdp:koth/kits/10striker/10striker
+    execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=10},tag=queued] as @s run function mgdp:koth/kits/10striker/items
     #kill super reward
     execute as @a[scores={KOTHkit=10,KOTHkillssuper=5..},tag=queued] as @s run give @s minecraft:potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:11,Amplifier:2,Duration:200}],display:{Name:'"Super Resistance Pot"'}}
     execute as @a[scores={KOTHkit=10,KOTHkillssuper=5..},tag=queued] as @s run playsound minecraft:block.anvil.use master @a ~ ~ ~ 9999999 .7
     execute as @a[scores={KOTHkit=10,KOTHkillssuper=5..},tag=queued] as @s run scoreboard players set @s KOTHkillssuper 0
 
 ##Orc
-    execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=11},tag=queued] as @s run function mgdp:koth/kits/11orc
+    execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=11},tag=queued] as @s run function mgdp:koth/kits/11orc/items
     #kill reward
     execute as @a[scores={KOTHkit=11,KOTHkills=3..},tag=queued] as @s run give @s minecraft:potion{CustomPotionEffects:[{Id:10,Amplifier:3,Duration:400,Ambient:1b},{Id:5,Amplifier:1,Duration:400,Ambient:1b}],CustomPotionColor:11299688,display:{Name:'"Orc Boost Pot"'}}
     execute as @a[scores={KOTHkit=11,KOTHkills=3..},tag=queued] as @s run scoreboard players set @s KOTHkills 0
@@ -75,7 +75,7 @@ execute as @e[type=player,scores={KOTHdeaths=1..},tag=queued] as @s run clear @s
 
 
 ##Knight
-    execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=20},tag=queued] as @s run function mgdp:koth/kits/20knight
+    execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=20},tag=queued] as @s run function mgdp:koth/kits/20knight/items
     #kill reward
     execute as @a[scores={KOTHkit=20,KOTHkills=3..},tag=queued] as @s run give @s shield{Damage:250} 1
     execute as @a[scores={KOTHkit=20,KOTHkills=3..},tag=queued] as @s run scoreboard players set @s KOTHkills 0
@@ -85,7 +85,7 @@ execute as @e[type=player,scores={KOTHdeaths=1..},tag=queued] as @s run clear @s
     execute as @a[scores={KOTHkit=20,KOTHkillssuper=5..},tag=queued] as @s run scoreboard players set @s KOTHkillssuper 0
 
 ##Archer
-    execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=30},tag=queued] as @s run function mgdp:koth/kits/30archer
+    execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=30},tag=queued] as @s run function mgdp:koth/kits/30archer/items
     #kill reward
     execute as @a[scores={KOTHkit=30,KOTHkills=3..},tag=queued] as @s run give @s arrow 10
     execute as @a[scores={KOTHkit=30,KOTHkills=3..},tag=queued] as @s run scoreboard players set @s KOTHkills 0
@@ -95,7 +95,7 @@ execute as @e[type=player,scores={KOTHdeaths=1..},tag=queued] as @s run clear @s
     execute as @a[scores={KOTHkit=30,KOTHkillssuper=5..},tag=queued] as @s run scoreboard players set @s KOTHkillssuper 0
 
 ##Sniper
-    execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=31},tag=queued] as @s run function mgdp:koth/kits/31sniper
+    execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=31},tag=queued] as @s run function mgdp:koth/kits/31sniper/items
     #kill reward
     execute as @a[scores={KOTHkit=31,KOTHkills=3..},tag=queued] as @s run give @s arrow 6
     execute as @a[scores={KOTHkit=31,KOTHkills=3..},tag=queued] as @s run scoreboard players set @s KOTHkills 0
@@ -108,7 +108,7 @@ execute as @e[type=player,scores={KOTHdeaths=1..},tag=queued] as @s run clear @s
     execute as @a[scores={KOTHkit=31},tag=queued,nbt={Inventory:[{Slot:-106b,id:"minecraft:bow",tag:{display:{Name:'"Sniper"'}}}]}] run effect give @s minecraft:slowness 1 4 true
 
 ##Warper
-    execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=40},tag=queued] as @s run function mgdp:koth/kits/40warper
+    execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=40},tag=queued] as @s run function mgdp:koth/kits/40warper/items
     #kill reward
     execute as @a[scores={KOTHkit=40,KOTHkills=1..},tag=queued] as @s run give @s ender_pearl{display:{Name:'"Tp Random Location"'}}
     execute as @a[scores={KOTHkit=40,KOTHkills=1..},tag=queued] as @s run scoreboard players set @s KOTHkills 0
@@ -140,7 +140,7 @@ execute as @e[type=player,scores={KOTHdeaths=1..},tag=queued] as @s run clear @s
     execute as @a[scores={KOTHkit=40,PearlUsed=1},tag=queued] run scoreboard players reset @s PearlUsed
 
 ##Fisherman
-    execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=50},tag=queued] as @s run function mgdp:koth/kits/50fisherman
+    execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=50},tag=queued] as @s run function mgdp:koth/kits/50fisherman/items
     #kill super reward
     execute as @a[scores={KOTHkit=50,KOTHkillssuper=5..},tag=queued] as @s run give @s golden_chestplate{display:{Name:'"Super Pufferfish Chestplate"'},Enchantments:[{id:"thorns",lvl:20}],Damage:92}
     execute as @a[scores={KOTHkit=50,KOTHkillssuper=5..},tag=queued] as @s run playsound minecraft:entity.puffer_fish.blow_up master @a ~ ~ ~ 9999999 .7
