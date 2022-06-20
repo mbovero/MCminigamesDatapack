@@ -35,4 +35,4 @@ execute as @a[x=8,y=-59,z=8,distance=..100] run team leave @s
 execute positioned 8 -30 -600 if entity @p[distance=..250] run function mgdp:koth/detect
 
 ###Custom Commands
-function mgdp:/customcommands/tick
+function mgdp:customcommands/tick

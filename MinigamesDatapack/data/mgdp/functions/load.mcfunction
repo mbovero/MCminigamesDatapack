@@ -34,4 +34,4 @@ function mgdp:reset
 
 
 ###Custom Commands Initialization
-function mgdp:/customcommands/init
+function mgdp:customcommands/init
