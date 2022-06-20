@@ -2,19 +2,19 @@
 #hub at 8 -30 -600
 
 ###Load message
-title @a title {"text":"KOTH","bold":true,"color":"gold"}
-playsound minecraft:entity.ender_dragon.growl master @a ~ ~ ~ 999999999999999999999 .5
+title @a[tag=KOTH_queued] title {"text":"KOTH","bold":true,"color":"gold"}
+playsound minecraft:entity.ender_dragon.growl master @a[tag=KOTH_queued] ~ ~ ~ 999999999999999999999 .5
 
 ###Scoreboard Initialization
 scoreboard objectives add Score dummy
 scoreboard objectives setdisplay sidebar.team.gold Score
 scoreboard players set @a[tag=KOTH_queued] Score 0
 team join InKothGame @a[tag=KOTH_queued]
-scoreboard players set @a KOTHkills 0
-scoreboard players set @a KOTHkills2 0
-scoreboard players set @a KOTHkillssuper 0
-scoreboard players reset @a PearlUsed
-scoreboard players set @a KOTHtotalkills 0
+scoreboard players set @a[tag=KOTH_queued] KOTHkills 0
+scoreboard players set @a[tag=KOTH_queued] KOTHkills2 0
+scoreboard players set @a[tag=KOTH_queued] KOTHkillssuper 0
+scoreboard players reset @a[tag=KOTH_queued] PearlUsed
+scoreboard players set @a[tag=KOTH_queued] KOTHtotalkills 0
 #remove suffixes
 team leave @a
 

@@ -1,13 +1,13 @@
 ###Hill
-execute as @a at @s if block ~ ~-0.9 ~ gold_block run scoreboard players add @s Score 1
-execute as @a at @s if block ~ ~-0.9 ~ gold_block run effect give @s glowing 1 255 true
-execute as @a at @s if block ~ ~-1.9 ~ gold_block run scoreboard players add @s Score 1
-execute as @a at @s if block ~ ~-1.9 ~ gold_block run effect give @s glowing 1 255 true
+execute as @a[tag=KOTH_queued] at @s if block ~ ~-0.9 ~ gold_block run scoreboard players add @s Score 1
+execute as @a[tag=KOTH_queued] at @s if block ~ ~-0.9 ~ gold_block run effect give @s glowing 1 255 true
+execute as @a[tag=KOTH_queued] at @s if block ~ ~-1.9 ~ gold_block run scoreboard players add @s Score 1
+execute as @a[tag=KOTH_queued] at @s if block ~ ~-1.9 ~ gold_block run effect give @s glowing 1 255 true
 
 ###Void
-execute as @a at @s if entity @s[y=0,dy=-5] run gamerule showDeathMessages false
-execute as @a at @s if entity @s[y=0,dy=-5] run kill @s
-execute as @a at @s if entity @s[y=0,dy=-5] run gamerule showDeathMessages true
+execute as @a[tag=KOTH_queued] at @s if entity @s[y=0,dy=-5] run gamerule showDeathMessages false
+execute as @a[tag=KOTH_queued] at @s if entity @s[y=0,dy=-5] run kill @s
+execute as @a[tag=KOTH_queued] at @s if entity @s[y=0,dy=-5] run gamerule showDeathMessages true
 
 ###No Hunger
 execute as @a[nbt={foodLevel:19},tag=KOTH_queued] run effect give @s saturation 1 1 true
