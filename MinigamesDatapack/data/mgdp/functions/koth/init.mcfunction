@@ -17,7 +17,7 @@ scoreboard objectives add KOTHstart dummy
 scoreboard objectives add KOTHend dummy
 #KOTH kit detection
 scoreboard objectives add KOTHkit dummy
-scoreboard players set @a KOTHkit 0
+scoreboard players set @a KOTHkit 10
 #y-level detection
 scoreboard objectives add ylevel dummy
 #warper pearl detection

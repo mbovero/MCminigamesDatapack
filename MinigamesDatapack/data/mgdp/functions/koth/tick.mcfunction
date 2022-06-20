@@ -46,6 +46,8 @@ execute if score bool KOTHend matches 1 run function mgdp:koth/end
 ###Random Spawns
 execute if score map KOTHmap matches 0 run spreadplayers 8 -1200 3 100 under 11 false @e[type=area_effect_cloud,tag=spawn]
 execute if score map KOTHmap matches 1 run spreadplayers -900 0 3 100 under 12 false @e[type=area_effect_cloud,tag=spawn]
+execute if score map KOTHmap matches 2 run spreadplayers -750 -1651 3 100 under 5 false @e[type=area_effect_cloud,tag=spawn]
+
 execute at @e[type=area_effect_cloud,tag=spawn] as @a[tag=KOTH_queued] run spawnpoint
 
 
@@ -106,6 +108,7 @@ execute as @e[type=player,scores={KOTHdeaths=1..},tag=KOTH_queued] as @s run cle
     #slowness when holding bow
     execute as @a[scores={KOTHkit=31},tag=KOTH_queued,nbt={SelectedItem:{id:"minecraft:bow",tag:{display:{Name:'"Sniper"'}}}}] run effect give @s minecraft:slowness 1 4 true
     execute as @a[scores={KOTHkit=31},tag=KOTH_queued,nbt={Inventory:[{Slot:-106b,id:"minecraft:bow",tag:{display:{Name:'"Sniper"'}}}]}] run effect give @s minecraft:slowness 1 4 true
+#execute at @a[nbt={SelectedItem:{id:"minecraft:bow"}}] run summon area_effect_cloud ~ ~.1 ~ {Particle:"block air",ReapplicationDelay:0,Radius:.5f,Duration:6,Potion:"minecraft:empty",Effects:[{Id:2b,Amplifier:4b,Duration:5,ShowParticles:0b}]}
 
 ##Warper
     execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=40},tag=KOTH_queued] as @s run function mgdp:koth/kits/40warper/items

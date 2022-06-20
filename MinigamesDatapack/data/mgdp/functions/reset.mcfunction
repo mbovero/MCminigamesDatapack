@@ -38,7 +38,7 @@ scoreboard players set bool GameInSession 0
 scoreboard players set bool KOTH 0
 scoreboard players set buttontick KOTHstart 0
 scoreboard players set bool KOTHend 0
-scoreboard players reset @a KOTHkit
+scoreboard players set @a KOTHkit 10
 scoreboard players reset @a ylevel
 scoreboard players reset @a PearlUsed
 #scoreboard players set map KOTHmap 0
