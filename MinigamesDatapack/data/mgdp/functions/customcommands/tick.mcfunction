@@ -9,7 +9,7 @@
     #tp to hub
     scoreboard players enable @a hub
     execute as @a[scores={hub=1..}] run tp -15 -44 -17
-    scoreboard players set @a hub 0
+    scoreboard players set @a[scores={hub=1..}] hub 0
 
 
     
