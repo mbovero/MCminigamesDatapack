@@ -8,7 +8,7 @@
 #General commands
     #tp to hub
     scoreboard players enable @a hub
-    execute as @a[scores={hub=1..}] run tp 5 -11 40
+    execute as @a[scores={hub=1..}] run tp -15 -44 -17
     scoreboard players set @a hub 0
 
 
