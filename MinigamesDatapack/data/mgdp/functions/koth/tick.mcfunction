@@ -79,7 +79,7 @@ execute as @e[type=player,scores={KOTHdeaths=1..},tag=KOTH_queued] as @s run cle
 ##Knight
     execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=20},tag=KOTH_queued] as @s run function mgdp:koth/kits/20knight/items
     #kill reward
-    execute as @a[scores={KOTHkit=20,KOTHkills=3..},tag=KOTH_queued] as @s run give @s shield{Damage:250} 1
+    execute as @a[scores={KOTHkit=20,KOTHkills=3..},tag=KOTH_queued] as @s run give @s shield{Damage:200} 1
     execute as @a[scores={KOTHkit=20,KOTHkills=3..},tag=KOTH_queued] as @s run scoreboard players set @s KOTHkills 0
     #kill super reward
     execute as @a[scores={KOTHkit=20,KOTHkillssuper=5..},tag=KOTH_queued] as @s run give @s minecraft:potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:10,Amplifier:3,Duration:200}],display:{Name:'"Super Regen Pot"'}}
