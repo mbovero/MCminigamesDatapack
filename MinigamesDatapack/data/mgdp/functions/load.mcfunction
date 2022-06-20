@@ -31,3 +31,7 @@ function mgdp:koth/init
 
 ###Reset Scores (and other stuff)
 function mgdp:reset
+
+
+###Custom Commands Initialization
+function mgdp:/customcommands/init
