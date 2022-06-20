@@ -7,8 +7,9 @@ playsound minecraft:entity.ender_dragon.growl master @a ~ ~ ~ 999999999999999999
 
 ###Scoreboard Initialization
 scoreboard objectives add Score dummy
-scoreboard objectives setdisplay sidebar Score
-scoreboard players set @a[tag=KOTHqueued] Score 0
+scoreboard objectives setdisplay sidebar.team.gold Score
+scoreboard players set @a[tag=KOTH_queued] Score 0
+team join InKothGame @a[tag=KOTH_queued]
 scoreboard players set @a KOTHkills 0
 scoreboard players set @a KOTHkills2 0
 scoreboard players set @a KOTHkillssuper 0
@@ -21,12 +22,12 @@ team leave @a
 ##map detection
 execute if score map KOTHmap matches 0 run summon area_effect_cloud 8 10 -1200 {Tags:["spawn"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 execute if score map KOTHmap matches 0 run setworldspawn 7 14 -1215
-execute if score map KOTHmap matches 0 run spawnpoint @a[tag=KOTHqueued] 8 12 -1200
+execute if score map KOTHmap matches 0 run spawnpoint @a[tag=KOTH_queued] 8 12 -1200
 execute if score map KOTHmap matches 0 run summon area_effect_cloud 8 10 -1200 {Tags:["five_min_timer"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 #castle of dreams
 execute if score map KOTHmap matches 1 run summon area_effect_cloud -900 12 0 {Tags:["spawn"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 execute if score map KOTHmap matches 1 run setworldspawn -904 12 7
-execute if score map KOTHmap matches 1 run spawnpoint @a[tag=KOTHqueued] -900 12 2
+execute if score map KOTHmap matches 1 run spawnpoint @a[tag=KOTH_queued] -900 12 2
 execute if score map KOTHmap matches 1 run summon area_effect_cloud -900 12 0 {Tags:["five_min_timer"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 
 
@@ -34,11 +35,11 @@ execute if score map KOTHmap matches 1 run summon area_effect_cloud -900 12 0 {T
 gamerule doImmediateRespawn true
 gamerule keepInventory true
 gamerule spawnRadius 0
-kill @a[tag=KOTHqueued,]
+kill @a[tag=KOTH_queued]
 ###############Try just teleporting instead?
 gamerule showDeathMessages true
 #kit give
-scoreboard players set @a[tag=KOTHqueued] KOTHdeaths 1
+scoreboard players set @a[tag=KOTH_queued] KOTHdeaths 1
 gamemode adventure @a
 
 

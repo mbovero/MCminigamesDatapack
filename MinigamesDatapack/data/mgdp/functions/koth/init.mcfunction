@@ -8,7 +8,7 @@ scoreboard objectives add KOTHkillssuper playerKillCount
 scoreboard objectives add KOTHtotalkills playerKillCount
 #game detection
 scoreboard objectives add GameInSession dummy
-tag @a remove queued
+tag @a remove KOTH_queued
 #KOTH game detection
 scoreboard objectives add KOTH dummy
 #KOTH start button
@@ -27,6 +27,9 @@ scoreboard objectives add KOTHmap dummy
 
 
 ###KOTH Team Initialization
+team add InKothGame
+team modify InKothGame color gold
+
 team add Striker
 team modify Striker suffix ["",{"text":" <","bold":true,"color":"gray"},{"text":"Striker","italic":true,"color":"dark_red"},{"text":">","bold":true,"color":"gray"}]
 team add Orc

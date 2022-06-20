@@ -11,9 +11,8 @@ xp set @a 0 points
 gamerule spawnRadius 0
 setworldspawn -16 -44 -18
 spawnpoint @a -16 -43 -18
-gamemode adventure @a
+gamemode adventure @a[tag=!GameDev]
 gamerule showDeathMessages false
-kill @e[type=armor_stand,scores={TickTime=0..}]
 kill @e[type=area_effect_cloud,scores={TickTime=0..}]
 kill @e[type=area_effect_cloud,tag=spawn]
 kill @e[type=item]
