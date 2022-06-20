@@ -65,6 +65,7 @@ execute as @e[type=player,scores={KOTHdeaths=1..},tag=KOTH_queued] as @s run cle
 
 ##Orc
     execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=11},tag=KOTH_queued] as @s run function mgdp:koth/kits/11orc/items
+                ####### What if we remove the regen pot, replace it with the resistance (and maybe strength still?), and replace the kill reward 2 with a goat horn that summons some husk/skeleton minions when used?
     #kill reward
     execute as @a[scores={KOTHkit=11,KOTHkills=3..},tag=KOTH_queued] as @s run give @s minecraft:potion{CustomPotionEffects:[{Id:10,Amplifier:3,Duration:400,Ambient:1b},{Id:5,Amplifier:1,Duration:400,Ambient:1b}],CustomPotionColor:11299688,display:{Name:'"Orc Boost Pot"'}}
     execute as @a[scores={KOTHkit=11,KOTHkills=3..},tag=KOTH_queued] as @s run scoreboard players set @s KOTHkills 0
@@ -79,8 +80,11 @@ execute as @e[type=player,scores={KOTHdeaths=1..},tag=KOTH_queued] as @s run cle
 ##Knight
     execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=20},tag=KOTH_queued] as @s run function mgdp:koth/kits/20knight/items
     #kill reward
-    execute as @a[scores={KOTHkit=20,KOTHkills=3..},tag=KOTH_queued] as @s run give @s shield{Damage:200} 1
+    execute as @a[scores={KOTHkit=20,KOTHkills=3..},tag=KOTH_queued] as @s run item replace entity @s weapon.offhand with shield{Damage:265}
     execute as @a[scores={KOTHkit=20,KOTHkills=3..},tag=KOTH_queued] as @s run scoreboard players set @s KOTHkills 0
+    #kill reward 2
+    execute as @a[scores={KOTHkit=20,KOTHkills2=5..},tag=KOTH_queued] as @s run give @s minecraft:potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:5,Amplifier:1,Duration:400}],display:{Name:'"Knight Strength Pot"'}}
+    execute as @a[scores={KOTHkit=20,KOTHkills2=5..},tag=KOTH_queued] as @s run scoreboard players set @s KOTHkills2 0
     #kill super reward
     execute as @a[scores={KOTHkit=20,KOTHkillssuper=5..},tag=KOTH_queued] as @s run give @s minecraft:potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:10,Amplifier:3,Duration:200}],display:{Name:'"Super Regen Pot"'}}
     execute as @a[scores={KOTHkit=20,KOTHkillssuper=5..},tag=KOTH_queued] as @s run playsound minecraft:entity.witch.drink master @a ~ ~ ~ 9999999 .7
