@@ -58,6 +58,10 @@ execute as @e[type=player,scores={KOTHdeaths=1..},tag=KOTH_queued] as @s run cle
 
 ##Striker
     execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=10},tag=KOTH_queued] as @s run function mgdp:koth/kits/10striker/items
+    #kill reward
+    execute as @a[scores={KOTHkit=10,KOTHkills=3..},tag=KOTH_queued] as @s run give @p splash_potion{display:{Name:'{"text":"Slowness Splash Pot"}'},CustomPotionEffects:[{Id:2b,Amplifier:3b,Duration:400}],CustomPotionColor:5855577} 1
+
+    execute as @a[scores={KOTHkit=10,KOTHkills=3..},tag=KOTH_queued] as @s run scoreboard players set @s KOTHkills 0
     #kill super reward
     execute as @a[scores={KOTHkit=10,KOTHkillssuper=5..},tag=KOTH_queued] as @s run give @s minecraft:potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:11,Amplifier:2,Duration:200}],display:{Name:'"Super Resistance Pot"'}}
     execute as @a[scores={KOTHkit=10,KOTHkillssuper=5..},tag=KOTH_queued] as @s run playsound minecraft:block.anvil.use master @a ~ ~ ~ 9999999 .7

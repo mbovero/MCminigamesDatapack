@@ -5,6 +5,9 @@
 #execute as @a[scores={customCommandExample=1..}] run say "test command"
 #scoreboard players set @a customCommandExample 0
 
+
+#create function that resets the player entering the command
+
 #General commands
     #tp to hub
     scoreboard players enable @a hub
