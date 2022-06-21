@@ -1,5 +1,12 @@
 ###Clockmaster Kit
 
+#Recall
+    #give variable scoreboard (matches with selected armor stand)
+    #set timer
+    schedule function mgdp:functions/koth/kits/41clockmaster/recalltimer.mcfunction s 5
+    #(manual recall in later version)
+    #timer runs out and teleports player to armor stand
+
 #give slowness 4 lingering potion
 
 #Ult gives everyone else slowness and mining fatiuge
