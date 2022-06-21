@@ -1,8 +1,9 @@
 
 ##Determine KOTH_Winner
-scoreboard players operation max Score > @a Score
-execute as @a if score @s Score = max Score run tag @s add KOTH_Winner
+scoreboard players operation max Score > @a[tag=KOTH_queued] Score
+execute as @a[tag=KOTH_queued] if score @s Score = max Score run tag @s add KOTH_Winner
 title @a[tag=KOTH_Winner] title {"text":"You win!","bold":true,"color":"green"}
+execute as @a[tag=KOTH_Winner] run tellraw @a[tag=KOTH_queued] ["",{"selector":"@s","bold":true,"color":"white"},{"text":" is the winner of ","color":"gray"},{"text":"KOTH","color":"gold"}]
 execute as @a[tag=KOTH_Winner] run playsound minecraft:item.goat_horn.sound.0 master @s ~ ~ ~ 999999999999 1.5
 execute as @a[tag=KOTH_Winner] run playsound minecraft:entity.firework_rocket.twinkle_far master @s ~ ~ ~ 999999999999 1
 tag @a[tag=!KOTH_Winner,nbt={Tags:["KOTH_queued"]}] add KOTH_Loser

@@ -44,5 +44,6 @@ scoreboard players reset @a ylevel
 scoreboard players reset @a PearlUsed
 #scoreboard players set map KOTHmap 0
 scoreboard players reset max
+scoreboard players set bool KOTHdoublepoints 0
 
 team leave @a

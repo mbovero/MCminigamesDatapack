@@ -1,8 +1,13 @@
 ###Hill
-execute as @a[tag=KOTH_queued] at @s if block ~ ~-0.9 ~ gold_block run scoreboard players add @s Score 1
-execute as @a[tag=KOTH_queued] at @s if block ~ ~-0.9 ~ gold_block run effect give @s glowing 1 255 true
-execute as @a[tag=KOTH_queued] at @s if block ~ ~-1.9 ~ gold_block run scoreboard players add @s Score 1
-execute as @a[tag=KOTH_queued] at @s if block ~ ~-1.9 ~ gold_block run effect give @s glowing 1 255 true
+execute if score bool KOTHdoublepoints matches 0 as @a[tag=KOTH_queued] at @s if block ~ ~-0.9 ~ gold_block run scoreboard players add @s Score 1
+execute if score bool KOTHdoublepoints matches 0 as @a[tag=KOTH_queued] at @s if block ~ ~-0.9 ~ gold_block run effect give @s glowing 1 255 true
+execute if score bool KOTHdoublepoints matches 0 as @a[tag=KOTH_queued] at @s if block ~ ~-1.9 ~ gold_block run scoreboard players add @s Score 1
+execute if score bool KOTHdoublepoints matches 0 as @a[tag=KOTH_queued] at @s if block ~ ~-1.9 ~ gold_block run effect give @s glowing 1 255 true
+#double points
+execute if score bool KOTHdoublepoints matches 1 as @a[tag=KOTH_queued] at @s if block ~ ~-0.9 ~ gold_block run scoreboard players add @s Score 2
+execute if score bool KOTHdoublepoints matches 1 as @a[tag=KOTH_queued] at @s if block ~ ~-0.9 ~ gold_block run effect give @s glowing 1 255 true
+execute if score bool KOTHdoublepoints matches 1 as @a[tag=KOTH_queued] at @s if block ~ ~-1.9 ~ gold_block run scoreboard players add @s Score 2
+execute if score bool KOTHdoublepoints matches 1 as @a[tag=KOTH_queued] at @s if block ~ ~-1.9 ~ gold_block run effect give @s glowing 1 255 true
 
 ###Void
 execute as @a[tag=KOTH_queued] at @s if entity @s[y=0,dy=-5] run gamerule showDeathMessages false
@@ -13,8 +18,19 @@ execute as @a[tag=KOTH_queued] at @s if entity @s[y=0,dy=-5] run gamerule showDe
 execute as @a[nbt={foodLevel:19},tag=KOTH_queued] run effect give @s saturation 1 1 true
 execute as @a[nbt={foodLevel:17},tag=KOTH_queued] run effect give @s saturation 1 1 true
 
-###Prevent Cheating/Collaboration     -   better alternative? yes - in to do app
-kill @e[type=item]
+###Super Kills xp Bar Display
+execute as @a[tag=KOTH_queued,scores={KOTHkillssuper=0}] run experience set @s 0 levels
+execute as @a[tag=KOTH_queued,scores={KOTHkillssuper=0}] run experience set @s 0 points
+execute as @a[tag=KOTH_queued,scores={KOTHkillssuper=1}] run experience set @s 1 levels
+execute as @a[tag=KOTH_queued,scores={KOTHkillssuper=1}] run experience set @s 1 points
+execute as @a[tag=KOTH_queued,scores={KOTHkillssuper=2}] run experience set @s 2 levels
+execute as @a[tag=KOTH_queued,scores={KOTHkillssuper=2}] run experience set @s 4 points
+execute as @a[tag=KOTH_queued,scores={KOTHkillssuper=3}] run experience set @s 3 levels
+execute as @a[tag=KOTH_queued,scores={KOTHkillssuper=3}] run experience set @s 8 points
+execute as @a[tag=KOTH_queued,scores={KOTHkillssuper=4}] run experience set @s 4 levels
+execute as @a[tag=KOTH_queued,scores={KOTHkillssuper=4}] run experience set @s 13 points
+execute as @a[tag=KOTH_queued,scores={KOTHkillssuper=5}] run experience set @s 5 levels
+execute as @a[tag=KOTH_queued,scores={KOTHkillssuper=5}] run experience set @s 0 points
 
 
 ###Game Timer
@@ -26,6 +42,9 @@ scoreboard players add @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]}] 
     execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=3600}] run tellraw @a[tag=KOTH_queued] ["",{"text":"Game ends in ","bold":true},{"text":"2","bold":true,"color":"gold"},{"text":" mins","bold":true}]
     execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=4800}] run tellraw @a[tag=KOTH_queued] ["",{"text":"Game ends in ","bold":true},{"text":"1","bold":true,"color":"dark_red"},{"text":" min","bold":true}]
     execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5400}] run tellraw @a[tag=KOTH_queued] ["",{"text":"Game ends in ","bold":true},{"text":"30","bold":true,"color":"dark_red"},{"text":" seconds","bold":true}]
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5400}] run scoreboard players set bool KOTHdoublepoints 1
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5400}] run title @a[tag=KOTH_queued] actionbar {"text":"DOUBLE POINTS ACTIVATED","bold":true,"color":"dark_red"}
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5400}] run playsound block.ender_chest.open master @a[tag=KOTH_queued] ~ ~ ~ 9999999999999999999999999 .1
     execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5700}] run tellraw @a[tag=KOTH_queued] ["",{"text":"Game ends in ","bold":true},{"text":"15","bold":true,"color":"dark_red"},{"text":" seconds!","bold":true}]
     execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5900}] run tellraw @a[tag=KOTH_queued] {"text":"5","bold":true,"color":"red"}
     execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5900}] run playsound block.note_block.chime master @a[tag=KOTH_queued] ~ ~ ~ 9999999999999999999999999 2
