@@ -96,7 +96,10 @@ execute as @e[type=player,scores={KOTHdeaths=1..},tag=KOTH_queued] as @s run cle
     execute as @a[scores={KOTHkit=30,KOTHkills=3..},tag=KOTH_queued] as @s run give @s arrow 10
     execute as @a[scores={KOTHkit=30,KOTHkills=3..},tag=KOTH_queued] as @s run scoreboard players set @s KOTHkills 0
     #kill super reward
-    execute as @a[scores={KOTHkit=30,KOTHkillssuper=5..},tag=KOTH_queued] as @s run give @s bow{Damage:379,Enchantments:[{id:"punch",lvl:3},{id:"power",lvl:5}],display:{Name:'"Super Bow"'}}
+    ### Test VVV
+    execute as @a[scores={KOTHkit=30,KOTHkillssuper=5..},tag=KOTH_queued] as @s run give @s crossbow{display:{Name:'{"text":"Super Poison Crossbow"}'},Damage:460,Enchantments:[{id:"minecraft:quick_charge",lvl:3s}],ChargedProjectiles:[{id:"minecraft:tipped_arrow",Count:1b,tag:{Potion:"minecraft:strong_poison"}},{id:"minecraft:tipped_arrow",Count:1b,tag:{Potion:"minecraft:strong_poison"}},{id:"minecraft:tipped_arrow",Count:1b,tag:{Potion:"minecraft:strong_poison"}}],Charged:1b} 1
+    execute as @a[scores={KOTHkit=30,KOTHkillssuper=5..},tag=KOTH_queued] as @s run give @s tipped_arrow{Potion:"minecraft:strong_poison"} 2
+    #execute as @a[scores={KOTHkit=30,KOTHkillssuper=5..},tag=KOTH_queued] as @s run give @s bow{Damage:379,Enchantments:[{id:"punch",lvl:3},{id:"power",lvl:5}],display:{Name:'"Super Bow"'}}
     execute as @a[scores={KOTHkit=30,KOTHkillssuper=5..},tag=KOTH_queued] as @s run playsound minecraft:entity.villager.work_fletcher master @a ~ ~ ~ 9999999 .7
     execute as @a[scores={KOTHkit=30,KOTHkillssuper=5..},tag=KOTH_queued] as @s run scoreboard players set @s KOTHkillssuper 0
 
