@@ -32,8 +32,8 @@ execute if score map KOTHmap matches 1 run spawnpoint @a[tag=KOTH_queued] -900 1
 execute if score map KOTHmap matches 1 run summon area_effect_cloud -900 12 0 {Tags:["five_min_timer"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 #ramen bowl
 execute if score map KOTHmap matches 2 run summon area_effect_cloud -750 5 -1651 {Tags:["spawn"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
-execute if score map KOTHmap matches 2 run setworldspawn -750 5 -1676
-execute if score map KOTHmap matches 2 run spawnpoint @a[tag=KOTH_queued] -750 5 -1651
+execute if score map KOTHmap matches 2 run setworldspawn -750 5 -1675
+execute if score map KOTHmap matches 2 run spawnpoint @a[tag=KOTH_queued] -750 5 -1675
 execute if score map KOTHmap matches 2 run summon area_effect_cloud -750 5 -1651 {Tags:["five_min_timer"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 
 

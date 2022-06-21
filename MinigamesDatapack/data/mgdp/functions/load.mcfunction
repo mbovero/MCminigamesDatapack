@@ -12,6 +12,7 @@ gamerule doPatrolSpawning false
 gamerule doTraderSpawning false
 gamerule doWeatherCycle false
 gamerule mobGriefing false
+gamerule doEntityDrops false
 #####gamerule sendCommandFeedback false
 
 #tp bigbudderbob -16 -44 -18

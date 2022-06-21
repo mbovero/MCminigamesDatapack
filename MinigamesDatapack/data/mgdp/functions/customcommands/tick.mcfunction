@@ -19,7 +19,20 @@
     scoreboard players set @a[scores={KOTHhub=1..}] KOTHhub 0
 
 
-    
+#GameDev commands
+    #tp to KOTH test place
+    scoreboard players enable @a[tag=GameDev] KOTHtestplace
+    execute as @a[scores={KOTHtestplace=1..}] run tp @s 8 12 -1200
+    scoreboard players set @a[scores={KOTHtestplace=1..}] KOTHtestplace 0
+    #tp to KOTH castle of dreams map
+    scoreboard players enable @a[tag=GameDev] KOTHcastleofdreams
+    execute as @a[scores={KOTHcastleofdreams=1..}] run tp @s -900 12 2
+    scoreboard players set @a[scores={KOTHcastleofdreams=1..}] KOTHcastleofdreams 0
+    #tp to KOTH ramen bowl map
+    scoreboard players enable @a[tag=GameDev] KOTHramenbowl
+    execute as @a[scores={KOTHramenbowl=1..}] run tp @s -751 9 -1650
+    scoreboard players set @a[scores={KOTHramenbowl=1..}] KOTHramenbowl 0
+
 
 
 

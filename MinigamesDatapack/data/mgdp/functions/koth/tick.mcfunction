@@ -154,6 +154,9 @@ execute as @e[type=player,scores={KOTHdeaths=1..},tag=KOTH_queued] as @s run cle
 
 ##Fisherman
     execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=50},tag=KOTH_queued] as @s run function mgdp:koth/kits/50fisherman/items
+    #kill reward
+    execute as @a[scores={KOTHkit=50,KOTHkills=2..},tag=KOTH_queued] as @s run give @s snowball{customball:1b,customball_type:1,display:{Name:'"Deploy Pufferfish"'}}
+    execute as @a[scores={KOTHkit=50,KOTHkills=2..},tag=KOTH_queued] as @s run scoreboard players set @s KOTHkills 0
     #kill super reward
     execute as @a[scores={KOTHkit=50,KOTHkillssuper=5..},tag=KOTH_queued] as @s run give @s golden_chestplate{display:{Name:'"Super Pufferfish Chestplate"'},Enchantments:[{id:"thorns",lvl:20}],Damage:92}
     execute as @a[scores={KOTHkit=50,KOTHkillssuper=5..},tag=KOTH_queued] as @s run playsound minecraft:entity.puffer_fish.blow_up master @a ~ ~ ~ 9999999 .7

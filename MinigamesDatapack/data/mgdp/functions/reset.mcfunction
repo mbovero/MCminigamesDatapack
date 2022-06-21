@@ -16,6 +16,7 @@ gamerule showDeathMessages false
 kill @e[type=area_effect_cloud,scores={TickTime=0..}]
 kill @e[type=area_effect_cloud,tag=spawn]
 kill @e[type=item]
+kill @e[type=arrow]
 
 ##Hub reset
 #KOTH
