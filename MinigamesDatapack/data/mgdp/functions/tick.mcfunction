@@ -39,3 +39,5 @@ function mgdp:customcommands/tick
 ###Custom Items
 #detect special snowballs if a game is in session
 execute if score bool GameInSession matches 1 run function mgdp:customitems/snowballs/tick
+#prevent item dropping during a game
+execute if score bool GameInSession matches 1 as @e[type=item,tag=!processed] run function mgdp:customitems/noitemdrop
