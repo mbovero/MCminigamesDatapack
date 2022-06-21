@@ -14,7 +14,7 @@ gamerule doWeatherCycle false
 gamerule mobGriefing false
 #####gamerule sendCommandFeedback false
 
-tp bigbudderbob -16 -44 -18
+#tp bigbudderbob -16 -44 -18
 
 ###Scoreboard Initialization
 #armor stand timers
@@ -35,3 +35,5 @@ function mgdp:reset
 
 ###Custom Commands Initialization
 function mgdp:customcommands/init
+###Custom Items Initialization
+function mgdp:customitems/init

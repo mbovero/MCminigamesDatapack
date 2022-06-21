@@ -14,6 +14,7 @@ scoreboard players set @a[tag=KOTH_queued] KOTHkills2 0
 scoreboard players set @a[tag=KOTH_queued] KOTHkillssuper 0
 scoreboard players reset @a[tag=KOTH_queued] PearlUsed
 scoreboard players set @a[tag=KOTH_queued] KOTHtotalkills 0
+scoreboard players set bool GameInSession 1
 #remove suffixes
 team leave @a
 team join InKothGame @a[tag=KOTH_queued]

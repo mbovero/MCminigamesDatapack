@@ -36,3 +36,5 @@ execute positioned 8 -30 -600 if entity @p[distance=..250] run function mgdp:kot
 
 ###Custom Commands
 function mgdp:customcommands/tick
+###Custom Item -temporary (in testing)
+execute if score bool GameInSession matches 1 run function mgdp:customitems/snowballs/tick
