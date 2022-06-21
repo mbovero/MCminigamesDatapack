@@ -1,11 +1,6 @@
 ###Clockmaster Kit
 
-#Recall
-    #give variable scoreboard (matches with selected armor stand)
-    #set timer
-    schedule function mgdp:functions/koth/kits/41clockmaster/recalltimer.mcfunction s 5
-    #(manual recall in later version)
-    #timer runs out and teleports player to armor stand
+#Give Recall item
 
 #give slowness 4 lingering potion
 
