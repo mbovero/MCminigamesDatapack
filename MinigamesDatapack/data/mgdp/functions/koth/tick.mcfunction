@@ -33,6 +33,13 @@ execute as @a[tag=KOTH_queued,scores={KOTHkillssuper=5}] run experience set @s 5
 execute as @a[tag=KOTH_queued,scores={KOTHkillssuper=5}] run experience set @s 0 points
 
 
+###Ability Reset Timers
+#Timer
+scoreboard players add @e[type=area_effect_cloud,nbt={Tags:["reset_timer"]}] TickTime 1
+#Reset sniper camoflauge
+execute at @e[type=area_effect_cloud,nbt={Tags:["reset_timer","camoflauge"]},limit=1,scores={TickTime=600}] run function mgdp:koth/kits/31sniper/resetcamoflauge
+
+
 ###Game Timer
 #count down display
 scoreboard players add @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]}] TickTime 1
@@ -130,6 +137,9 @@ execute as @e[type=player,scores={KOTHdeaths=1..},tag=KOTH_queued] as @s run cle
     #kill reward
     execute as @a[scores={KOTHkit=31,KOTHkills=3..},tag=KOTH_queued] as @s run give @s arrow 6
     execute as @a[scores={KOTHkit=31,KOTHkills=3..},tag=KOTH_queued] as @s run scoreboard players set @s KOTHkills 0
+    #kill reward 2
+    execute as @a[scores={KOTHkit=31,KOTHkills2=4..},tag=KOTH_queued] as @s run give @s snowball{customball:1b,customball_type:2,display:{Name:'"Deploy Camo Barrier"'}}
+    execute as @a[scores={KOTHkit=31,KOTHkills2=4..},tag=KOTH_queued] as @s run scoreboard players set @s KOTHkills2 0
     #kill super reward
     execute as @a[scores={KOTHkit=31,KOTHkillssuper=5..},tag=KOTH_queued] as @s run give @s crossbow{display:{Name:'{"text":"Super Rocket Launcher"}'},Damage:464,ChargedProjectiles:[{id:"minecraft:firework_rocket",Count:1b,tag:{Fireworks:{Flight:20b,Explosions:[{Type:1,Colors:[I;16711680]},{Type:1,Colors:[I;16744448]},{Type:1,Colors:[I;16763904]},{Type:1,Colors:[I;16777215]},{Type:1,Colors:[I;11776947]},{Type:0,Colors:[I;16736003]},{Type:1,Colors:[I;4539717]},{Type:1,Colors:[I;16727040]},{Type:1,Colors:[I;16765468]},{Type:1,Colors:[I;16711680]},{Type:1,Colors:[I;13750737]}]}}},{},{}],Charged:1b} 1
     execute as @a[scores={KOTHkit=31,KOTHkillssuper=5..},tag=KOTH_queued] as @s run playsound minecraft:entity.firework_rocket.large_blast_far master @a ~ ~ ~ 9999999 .7

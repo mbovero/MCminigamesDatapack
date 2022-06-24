@@ -1,6 +1,7 @@
 #snowball types detection/assignment
 execute if entity @s[nbt={Item:{tag:{customball_type:0}}}] run summon snowball ~ ~ ~ {Tags:["customball","init"],Passengers:[{id:"minecraft:area_effect_cloud",Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["customitem","customball_type:0"]}]}
 execute if entity @s[nbt={Item:{tag:{customball_type:1}}}] run summon snowball ~ ~ ~ {Tags:["customball","init"],Passengers:[{id:"minecraft:area_effect_cloud",Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["customitem","customball_type:1"]}]}
+execute if entity @s[nbt={Item:{tag:{customball_type:2}}}] run summon snowball ~ ~ ~ {Tags:["customball","init"],Passengers:[{id:"minecraft:area_effect_cloud",Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["customitem","customball_type:2"]}]}
 
 
 #transfer data to new entities
