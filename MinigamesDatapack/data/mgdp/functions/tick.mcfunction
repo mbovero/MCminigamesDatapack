@@ -4,10 +4,10 @@ execute if score bool KOTH matches 1 run function mgdp:koth/tick
 
 ###Boost Pads
 #jump/speed
-execute as @a at @s if block ~ ~-0.7 ~ lime_glazed_terracotta run effect give @s jump_boost 1 7 true
+execute as @a at @s if block ~ ~-0.9 ~ lime_glazed_terracotta run effect give @s jump_boost 1 7 true
 execute as @a at @s if block ~ ~-0.7 ~ lime_glazed_terracotta run effect give @s speed 1 15 true
 #jump
-execute as @a at @s if block ~ ~-0.7 ~ gray_glazed_terracotta run effect give @s jump_boost 1 5 true
+execute as @a at @s if block ~ ~-0.9 ~ gray_glazed_terracotta run effect give @s jump_boost 1 5 true
 execute as @a at @s unless block ~ ~-0.3 ~ gray_glazed_terracotta unless block ~ ~-0.3 ~ air unless block ~ ~-0.3 ~ lime_glazed_terracotta run effect clear @s jump_boost
 #speed
 execute as @a at @s if block ~ ~-0.7 ~ magenta_glazed_terracotta run effect give @s speed 1 15 true

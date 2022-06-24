@@ -1,3 +1,7 @@
+###Reset Abilities
+scoreboard players set @e[type=minecraft:area_effect_cloud,tag=reset_timer] TickTime 6000
+execute at @e[type=area_effect_cloud,nbt={Tags:["reset_timer","camoflauge"]},limit=1,scores={TickTime=600..}] run function mgdp:koth/kits/31sniper/resetcamoflauge
+
 
 ##Determine KOTH_Winner
 scoreboard players operation max Score > @a[tag=KOTH_queued] Score

@@ -37,7 +37,7 @@ execute as @a[tag=KOTH_queued,scores={KOTHkillssuper=5}] run experience set @s 0
 #Timer
 scoreboard players add @e[type=area_effect_cloud,nbt={Tags:["reset_timer"]}] TickTime 1
 #Reset sniper camoflauge
-execute at @e[type=area_effect_cloud,nbt={Tags:["reset_timer","camoflauge"]},limit=1,scores={TickTime=600}] run function mgdp:koth/kits/31sniper/resetcamoflauge
+execute at @e[type=area_effect_cloud,nbt={Tags:["reset_timer","camoflauge"]},limit=1,scores={TickTime=600..}] run function mgdp:koth/kits/31sniper/resetcamoflauge
 
 
 ###Game Timer
@@ -145,8 +145,8 @@ execute as @e[type=player,scores={KOTHdeaths=1..},tag=KOTH_queued] as @s run cle
     execute as @a[scores={KOTHkit=31,KOTHkillssuper=5..},tag=KOTH_queued] as @s run playsound minecraft:entity.firework_rocket.large_blast_far master @a ~ ~ ~ 9999999 .7
     execute as @a[scores={KOTHkit=31,KOTHkillssuper=5..},tag=KOTH_queued] as @s run scoreboard players set @s KOTHkillssuper 0
     #slowness when holding bow
-    execute as @a[scores={KOTHkit=31},tag=KOTH_queued,nbt={SelectedItem:{id:"minecraft:bow",tag:{display:{Name:'"Sniper"'}}}}] run effect give @s minecraft:slowness 1 4 true
-    execute as @a[scores={KOTHkit=31},tag=KOTH_queued,nbt={Inventory:[{Slot:-106b,id:"minecraft:bow",tag:{display:{Name:'"Sniper"'}}}]}] run effect give @s minecraft:slowness 1 4 true
+    execute as @a[scores={KOTHkit=31},tag=KOTH_queued,nbt={SelectedItem:{id:"minecraft:bow",tag:{display:{Name:'"Sniper"'}}}}] run function mgdp:koth/kits/31sniper/slow
+    execute as @a[scores={KOTHkit=31},tag=KOTH_queued,nbt={Inventory:[{Slot:-106b,id:"minecraft:bow",tag:{display:{Name:'"Sniper"'}}}]}] run function mgdp:koth/kits/31sniper/slow
 #execute at @a[nbt={SelectedItem:{id:"minecraft:bow"}}] run summon area_effect_cloud ~ ~.1 ~ {Particle:"block air",ReapplicationDelay:0,Radius:.5f,Duration:6,Potion:"minecraft:empty",Effects:[{Id:2b,Amplifier:4b,Duration:5,ShowParticles:0b}]}
 
 ##Warper
