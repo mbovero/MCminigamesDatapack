@@ -1,4 +1,4 @@
-###Scoreboard Initialization
+#####Scoreboard Initialization
 #death count for respawn tracking
 scoreboard objectives add KOTHdeaths deathCount
 #kill detection
@@ -6,15 +6,6 @@ scoreboard objectives add KOTHkills playerKillCount
 scoreboard objectives add KOTHkills2 playerKillCount
 scoreboard objectives add KOTHkillssuper playerKillCount
 scoreboard objectives add KOTHtotalkills playerKillCount
-#game detection
-scoreboard objectives add GameInSession dummy
-tag @a remove KOTH_queued
-#KOTH game detection
-scoreboard objectives add KOTH dummy
-#KOTH start button
-scoreboard objectives add KOTHstart dummy
-#KOTH end game bool
-scoreboard objectives add KOTHend dummy
 #KOTH kit detection
 scoreboard objectives add KOTHkit dummy
 scoreboard players set @a KOTHkit 10
@@ -24,8 +15,20 @@ scoreboard objectives add ylevel dummy
 scoreboard objectives add PearlUsed minecraft.used:minecraft.ender_pearl
 #KOTH map detection
 scoreboard objectives add KOTHmap dummy
+#KOTH start button
+scoreboard objectives add KOTHstart dummy
+##Boolean Scoreboard
+scoreboard objectives add BooleanVariables dummy
+#game detection
+#scoreboard objectives add GameInSession dummy
+tag @a remove KOTH_queued
+#KOTH game detection
+scoreboard objectives add KOTH dummy
+#KOTH end game bool
+scoreboard objectives add KOTHend dummy
 #KOTH double points detection
 scoreboard objectives add KOTHdoublepoints dummy
+
 
 
 ###KOTH Team Initialization

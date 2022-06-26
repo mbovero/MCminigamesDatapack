@@ -1,5 +1,5 @@
 ###Detect and Activate Games
-execute if score bool KOTH matches 1 run function mgdp:koth/tick
+execute if score KOTH BooleanVariables matches 1 run function mgdp:koth/tick
 
 
 ###Boost Pads
@@ -40,6 +40,6 @@ execute positioned 8 -30 -600 if entity @p[distance=..250] run function mgdp:kot
 function mgdp:customcommands/tick
 ###Custom Items
 #detect special snowballs if a game is in session
-execute if score bool GameInSession matches 1 run function mgdp:customitems/snowballs/tick
+execute if score GameInSession BooleanVariables matches 1 run function mgdp:customitems/snowballs/tick
 #prevent item dropping during a game
-execute if score bool GameInSession matches 1 as @e[type=item,tag=!processed] run function mgdp:customitems/noitemdrop
+execute if score GameInSession BooleanVariables matches 1 as @e[type=item,tag=!processed] run function mgdp:customitems/noitemdrop

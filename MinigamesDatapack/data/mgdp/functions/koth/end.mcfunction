@@ -4,8 +4,8 @@ execute at @e[type=area_effect_cloud,nbt={Tags:["reset_timer","camoflauge"]},lim
 
 
 ##Determine KOTH_Winner
-scoreboard players operation max Score > @a[tag=KOTH_queued] Score
-execute as @a[tag=KOTH_queued] if score @s Score = max Score run tag @s add KOTH_Winner
+scoreboard players operation max KOTHscore > @a[tag=KOTH_queued] KOTHscore
+execute as @a[tag=KOTH_queued] if score @s KOTHscore = max KOTHscore run tag @s add KOTH_Winner
 title @a[tag=KOTH_Winner] title {"text":"You win!","bold":true,"color":"green"}
 execute as @a[tag=KOTH_Winner] run tellraw @a[tag=KOTH_queued] ["",{"selector":"@s","bold":true,"color":"white"},{"text":" is the winner of ","color":"gray"},{"text":"KOTH","color":"gold"}]
 execute as @a[tag=KOTH_Winner] run playsound minecraft:item.goat_horn.sound.0 master @s ~ ~ ~ 999999999999 1.5
@@ -17,7 +17,7 @@ execute as @a[tag=KOTH_Loser] run playsound minecraft:item.goat_horn.sound.3 mas
 #Reset roles
 tag @a remove KOTH_Loser
 tag @a remove KOTH_Winner
-scoreboard players reset max Score
+scoreboard players reset max KOTHscore
 
 ###End KOTH (reset)
 function mgdp:reset

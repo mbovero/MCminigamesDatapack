@@ -27,7 +27,7 @@ execute if score buttontick KOTHstart matches 18 run playsound minecraft:block.b
         execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=180}] run particle glow 8 -58 -627 .75 .1 .75 0 50 normal
     #start game at end of timer
     execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=200}] run function mgdp:koth/start
-    execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=200}] run scoreboard players set bool KOTH 1 
+    execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=200}] run scoreboard players set KOTH BooleanVariables 1 
     #remove KOTH queue button
     execute if entity @e[type=armor_stand,nbt={Tags:["ten_sec_timer"]},limit=1,scores={TickTime=200}] run setblock 8 -59 -631 air
         ##############disable all other game buttons too?

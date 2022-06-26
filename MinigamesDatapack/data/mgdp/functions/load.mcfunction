@@ -16,7 +16,6 @@ gamerule doEntityDrops false
 gamerule doMobLoot false
 #####gamerule sendCommandFeedback false
 
-#tp bigbudderbob -16 -44 -18
 
 ###Scoreboard Initialization
 #armor stand timers

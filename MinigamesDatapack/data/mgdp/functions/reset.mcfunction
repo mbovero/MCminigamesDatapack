@@ -28,22 +28,25 @@ forceload remove 8 -631
 ##Scoreboard 
 scoreboard players reset @e TickTime
 scoreboard objectives setdisplay sidebar
-scoreboard objectives remove Score
+scoreboard objectives remove KOTHscore
+scoreboard players set GameInSession BooleanVariables 0
+
+#KOTH
 scoreboard players set @a KOTHdeaths 0
 scoreboard players reset @a KOTHkills
 scoreboard players reset @a KOTHkills2
 scoreboard players reset @a KOTHkillssuper
 scoreboard players reset @a KOTHtotalkills
-scoreboard players set bool GameInSession 0
-#KOTH
-scoreboard players set bool KOTH 0
-scoreboard players set buttontick KOTHstart 0
-scoreboard players set bool KOTHend 0
 scoreboard players set @a KOTHkit 10
 scoreboard players reset @a ylevel
 scoreboard players reset @a PearlUsed
-#scoreboard players set map KOTHmap 0
+scoreboard players set buttontick KOTHstart 0
 scoreboard players reset max
-scoreboard players set bool KOTHdoublepoints 0
+
+scoreboard players set KOTH BooleanVariables 0
+scoreboard players set KOTHend BooleanVariables 0
+scoreboard players set KOTHdoublepoints BooleanVariables 0
+
+#scoreboard players set map KOTHmap 0   -   caused issues trying to reset display name
 
 team leave @a

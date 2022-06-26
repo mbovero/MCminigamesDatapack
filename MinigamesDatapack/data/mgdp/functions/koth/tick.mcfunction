@@ -1,13 +1,13 @@
 ###Hill
-execute if score bool KOTHdoublepoints matches 0 as @a[tag=KOTH_queued] at @s if block ~ ~-0.9 ~ gold_block run scoreboard players add @s Score 1
-execute if score bool KOTHdoublepoints matches 0 as @a[tag=KOTH_queued] at @s if block ~ ~-0.9 ~ gold_block run effect give @s glowing 1 255 true
-execute if score bool KOTHdoublepoints matches 0 as @a[tag=KOTH_queued] at @s if block ~ ~-1.9 ~ gold_block run scoreboard players add @s Score 1
-execute if score bool KOTHdoublepoints matches 0 as @a[tag=KOTH_queued] at @s if block ~ ~-1.9 ~ gold_block run effect give @s glowing 1 255 true
+execute if score KOTHdoublepoints BooleanVariables matches 0 as @a[tag=KOTH_queued] at @s if block ~ ~-0.9 ~ gold_block run scoreboard players add @s KOTHscore 1
+execute if score KOTHdoublepoints BooleanVariables matches 0 as @a[tag=KOTH_queued] at @s if block ~ ~-0.9 ~ gold_block run effect give @s glowing 1 255 true
+execute if score KOTHdoublepoints BooleanVariables matches 0 as @a[tag=KOTH_queued] at @s if block ~ ~-1.9 ~ gold_block run scoreboard players add @s KOTHscore 1
+execute if score KOTHdoublepoints BooleanVariables matches 0 as @a[tag=KOTH_queued] at @s if block ~ ~-1.9 ~ gold_block run effect give @s glowing 1 255 true
 #double points
-execute if score bool KOTHdoublepoints matches 1 as @a[tag=KOTH_queued] at @s if block ~ ~-0.9 ~ gold_block run scoreboard players add @s Score 2
-execute if score bool KOTHdoublepoints matches 1 as @a[tag=KOTH_queued] at @s if block ~ ~-0.9 ~ gold_block run effect give @s glowing 1 255 true
-execute if score bool KOTHdoublepoints matches 1 as @a[tag=KOTH_queued] at @s if block ~ ~-1.9 ~ gold_block run scoreboard players add @s Score 2
-execute if score bool KOTHdoublepoints matches 1 as @a[tag=KOTH_queued] at @s if block ~ ~-1.9 ~ gold_block run effect give @s glowing 1 255 true
+execute if score KOTHdoublepoints BooleanVariables matches 1 as @a[tag=KOTH_queued] at @s if block ~ ~-0.9 ~ gold_block run scoreboard players add @s KOTHscore 2
+execute if score KOTHdoublepoints BooleanVariables matches 1 as @a[tag=KOTH_queued] at @s if block ~ ~-0.9 ~ gold_block run effect give @s glowing 1 255 true
+execute if score KOTHdoublepoints BooleanVariables matches 1 as @a[tag=KOTH_queued] at @s if block ~ ~-1.9 ~ gold_block run scoreboard players add @s KOTHscore 2
+execute if score KOTHdoublepoints BooleanVariables matches 1 as @a[tag=KOTH_queued] at @s if block ~ ~-1.9 ~ gold_block run effect give @s glowing 1 255 true
 
 ###Void
 execute as @a[tag=KOTH_queued] at @s if entity @s[y=0,dy=-5] run gamerule showDeathMessages false
@@ -49,7 +49,7 @@ scoreboard players add @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]}] 
     execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=3600}] run tellraw @a[tag=KOTH_queued] ["",{"text":"Game ends in ","bold":true},{"text":"2","bold":true,"color":"gold"},{"text":" mins","bold":true}]
     execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=4800}] run tellraw @a[tag=KOTH_queued] ["",{"text":"Game ends in ","bold":true},{"text":"1","bold":true,"color":"dark_red"},{"text":" min","bold":true}]
     execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5400}] run tellraw @a[tag=KOTH_queued] ["",{"text":"Game ends in ","bold":true},{"text":"30","bold":true,"color":"dark_red"},{"text":" seconds","bold":true}]
-    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5400}] run scoreboard players set bool KOTHdoublepoints 1
+    execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5400}] run scoreboard players set KOTHdoublepoints BooleanVariables 1
     execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5400}] run title @a[tag=KOTH_queued] actionbar {"text":"DOUBLE POINTS ACTIVATED","bold":true,"color":"dark_red"}
     execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5400}] run playsound block.ender_chest.open master @a[tag=KOTH_queued] ~ ~ ~ 9999999999999999999999999 .1
     execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5700}] run tellraw @a[tag=KOTH_queued] ["",{"text":"Game ends in ","bold":true},{"text":"15","bold":true,"color":"dark_red"},{"text":" seconds!","bold":true}]
@@ -64,9 +64,9 @@ scoreboard players add @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]}] 
     execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5980}] run tellraw @a[tag=KOTH_queued] {"text":"1","bold":true,"color":"red"}
     execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=5980}] run playsound block.note_block.chime master @a[tag=KOTH_queued] ~ ~ ~ 9999999999999999999999999 .1
 #end game at end of timer
-execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=6000..}] run scoreboard players set bool KOTHend 1
+execute if entity @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},limit=1,scores={TickTime=6000..}] run scoreboard players set KOTHend BooleanVariables 1
 kill @e[type=area_effect_cloud,nbt={Tags:["five_min_timer"]},scores={TickTime=6000..}]
-execute if score bool KOTHend matches 1 run function mgdp:koth/end
+execute if score KOTHend BooleanVariables matches 1 run function mgdp:koth/end
 
 
 ###Random Spawns
