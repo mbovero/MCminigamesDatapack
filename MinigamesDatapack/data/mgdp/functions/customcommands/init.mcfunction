@@ -14,3 +14,6 @@ scoreboard players reset @a KOTHcastleofdreams
 #tp KOTH ramen bowl map
 scoreboard objectives add KOTHramenbowl trigger
 scoreboard players reset @a KOTHramenbowl
+#tp KOTH hills map
+scoreboard objectives add KOTHhills trigger
+scoreboard players reset @a KOTHhills

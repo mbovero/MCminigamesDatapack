@@ -30,6 +30,8 @@ execute as @a at @s if entity @s[y=-20,dy=-500] run effect give @s saturation 10
 execute as @a at @s if entity @s[y=-20,dy=-500] run effect give @s regeneration 10 255 true
 #clear team in main lobby
 execute as @a[x=8,y=-59,z=8,distance=..100] run team leave @s
+#gamemode adventure on lobby tp
+execute as @a[x=-16,y=-44,z=-18,distance=..1,gamemode=survival] run gamemode adventure
 
 #####Game Start Timers
 execute positioned 8 -30 -600 if entity @p[distance=..250] run function mgdp:koth/detect

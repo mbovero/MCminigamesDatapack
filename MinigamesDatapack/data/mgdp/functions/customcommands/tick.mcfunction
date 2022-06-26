@@ -32,6 +32,10 @@
     scoreboard players enable @a[tag=GameDev] KOTHramenbowl
     execute as @a[scores={KOTHramenbowl=1..}] run tp @s -751 9 -1650
     scoreboard players set @a[scores={KOTHramenbowl=1..}] KOTHramenbowl 0
+    #tp to KOTH hills map
+    scoreboard players enable @a[tag=GameDev] KOTHhills
+    execute as @a[scores={KOTHhills=1..}] run tp @s -904 18 -601
+    scoreboard players set @a[scores={KOTHhills=1..}] KOTHhills 0
 
 
 

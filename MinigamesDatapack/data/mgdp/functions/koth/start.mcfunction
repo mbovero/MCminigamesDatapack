@@ -35,9 +35,14 @@ execute if score map KOTHmap matches 2 run summon area_effect_cloud -750 5 -1651
 execute if score map KOTHmap matches 2 run setworldspawn -750 5 -1675
 execute if score map KOTHmap matches 2 run spawnpoint @a[tag=KOTH_queued] -750 5 -1675
 execute if score map KOTHmap matches 2 run summon area_effect_cloud -750 5 -1651 {Tags:["five_min_timer"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+#ramen bowl
+execute if score map KOTHmap matches 3 run summon area_effect_cloud -935 11 -618 {Tags:["spawn"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+execute if score map KOTHmap matches 3 run setworldspawn -935 11 -618
+execute if score map KOTHmap matches 3 run spawnpoint @a[tag=KOTH_queued] -935 11 -618
+execute if score map KOTHmap matches 3 run summon area_effect_cloud -900 5 -601 {Tags:["five_min_timer"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 
 
-#spawning
+#spawning    -   don't /kill because it increases kill count of players that were punching eachother beforehand
 gamerule doImmediateRespawn true
 gamerule keepInventory true
 gamerule spawnRadius 0

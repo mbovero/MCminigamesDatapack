@@ -73,6 +73,8 @@ execute if score bool KOTHend matches 1 run function mgdp:koth/end
 execute if score map KOTHmap matches 0 run spreadplayers 8 -1200 3 100 under 11 false @e[type=area_effect_cloud,tag=spawn]
 execute if score map KOTHmap matches 1 run spreadplayers -900 0 3 100 under 12 false @e[type=area_effect_cloud,tag=spawn]
 execute if score map KOTHmap matches 2 run spreadplayers -750 -1651 3 100 under 5 false @e[type=area_effect_cloud,tag=spawn]
+execute if score map KOTHmap matches 3 run spreadplayers -900 -600 3 100 under 11 false @e[type=area_effect_cloud,tag=spawn]
+
 
 execute at @e[type=area_effect_cloud,tag=spawn] as @a[tag=KOTH_queued] run spawnpoint
 
@@ -85,7 +87,7 @@ execute as @e[type=player,scores={KOTHdeaths=1..},tag=KOTH_queued] as @s run cle
 ##Striker
     execute as @e[type=player,scores={KOTHdeaths=1..,KOTHkit=10},tag=KOTH_queued] as @s run function mgdp:koth/kits/10striker/items
     #kill reward
-    execute as @a[scores={KOTHkit=10,KOTHkills=3..},tag=KOTH_queued] as @s run give @p splash_potion{display:{Name:'{"text":"Slowness Splash Pot"}'},CustomPotionEffects:[{Id:2,Amplifier:3,Duration:400}],CustomPotionColor:5855577} 1
+    execute as @a[scores={KOTHkit=10,KOTHkills=3..},tag=KOTH_queued] as @s run give @s splash_potion{display:{Name:'{"text":"Slowness Splash Pot"}'},CustomPotionEffects:[{Id:2,Amplifier:3,Duration:400}],CustomPotionColor:5855577} 1
     execute as @a[scores={KOTHkit=10,KOTHkills=3..},tag=KOTH_queued] as @s run scoreboard players set @s KOTHkills 0
     #kill super reward
     execute as @a[scores={KOTHkit=10,KOTHkillssuper=5..},tag=KOTH_queued] as @s run give @s minecraft:potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:11,Amplifier:2,Duration:200}],display:{Name:'"Super Resistance Pot"'}}
