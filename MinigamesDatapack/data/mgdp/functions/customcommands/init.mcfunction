@@ -5,6 +5,9 @@ scoreboard players reset @a hub
 #tp KOTH hub
 scoreboard objectives add KOTHhub trigger
 scoreboard players reset @a KOTHhub
+#tp MM hub
+scoreboard objectives add MMhub trigger
+scoreboard players reset @a MMhub
 #tp KOTH test place
 scoreboard objectives add KOTHtestplace trigger
 scoreboard players reset @a KOTHtestplace

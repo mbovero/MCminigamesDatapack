@@ -17,6 +17,10 @@
     scoreboard players enable @a KOTHhub
     execute as @a[scores={KOTHhub=1..}] run tp @s 8 -60 -600 -180 0
     scoreboard players set @a[scores={KOTHhub=1..}] KOTHhub 0
+    #tp to MM hub
+    scoreboard players enable @a MMhub
+    execute as @a[scores={MMhub=1..}] run tp @s 0 -53 -1800 -180 0
+    scoreboard players set @a[scores={MMhub=1..}] MMhub 0
 
 
 #GameDev commands
