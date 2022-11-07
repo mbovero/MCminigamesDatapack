@@ -28,9 +28,10 @@ scoreboard objectives setdisplay list Health
 
 ###KOTH init
 function mgdp:koth/init
+###KOTH init
+function mgdp:murmyst/init
 
-
-###Reset Scores (and other stuff)
+###Reset Scores (and other stuff)        |||||| UPDATE FOR MM
 function mgdp:reset
 
 
