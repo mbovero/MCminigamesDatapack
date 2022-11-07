@@ -1,1 +1,0 @@
-###Initializing The murderer role

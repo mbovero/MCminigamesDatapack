@@ -1,1 +1,0 @@
-1.0.0.1  (in progress/active)       KOTH still incomplete, 1 map, 7 active kits, 11 kits in progress, custom teleport commands

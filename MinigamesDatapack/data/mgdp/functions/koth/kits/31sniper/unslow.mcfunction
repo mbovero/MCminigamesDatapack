@@ -1,1 +1,0 @@
-effect clear @p[nbt={ActiveEffects:[{Id:2, Amplifier:2b}]}] slowness
