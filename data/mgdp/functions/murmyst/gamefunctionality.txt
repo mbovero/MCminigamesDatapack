@@ -1,0 +1,35 @@
+Murder weapons:
+	Limited murder weapons
+	Noted with a card to indicate the use as a murder weapon
+Discussion:
+	Characters are able to pick up pieces of evidence to aid them during discussion
+	Notebook with them to write down possible information
+Accusation:
+Roles:
+	Murderer:
+		Has an overarching goal
+		Motive:
+		    Randomly pulled from a collection
+		    The Possessed
+			     A vengeful spirit of a worker preying upon the rich people from the house's lineage.
+					Goal:
+						Kill a few selected people before the time is up. You don't need to get away with it.
+					    Can kill someone during discussion if cooldown allows it. (Only 1)
+						Special weapon: Sprit powers allow almost instant death.
+			The Business-person
+				While very successful, there are just a few people still in your way. 
+				Goal: 
+					Kill a few selected people and get away with it for the remaining time.
+					Special weapon: Has a poison he can put in someone's drink or inject into someone.
+			The Lover
+				You know your husband/wife has been seeing someone behind your back. You've come to this party to get rid of them.
+				Goal:
+					Kill the person your spouse cheated on you with. Kill as many people as you need to stay innocent before the time runs out.
+					
+    Bystander:
+		Has to work with everyone to find the killer by finding out the means, motive, and opportunity.
+		Collects bits of evidence 
+Killing:
+	The murderer has to get a weapon before killing or have a chosen weapon based on their role.
+	The victim's vision is limited and can only walk so fast.
+	Depending on the weapon they can stay alive for a certain amount of time.
